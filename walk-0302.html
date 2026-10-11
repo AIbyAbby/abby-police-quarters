@@ -1,51 +1,133 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>0302社區走讀 - 走進消失ing的警舍街角</title>
+  <title>0302 社區走讀紀錄 ｜ 走進消失ing的警舍街角</title>
+  <meta name="description" content="新店七張警察眷舍與仁愛里社區發展紀錄：0302 社區走讀紀錄">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- 行動裝置頂部列 -->
-  <header class="mobile-header">
-    <div style="font-weight: bold; font-size: 1.1rem;">走進消失ing的警舍街角</div>
-    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+<body id="top">
+
+  <!-- 頂部主要導覽列 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a class="brand" href="index.html">
+        <span class="brand-title">走進消失ing的警舍街角</span>
+        <span class="brand-subtitle">新店七張警察眷舍與仁愛里紀錄</span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="nav-toggle-btn" onclick="toggleDrawer()" aria-label="開啟選單">
+          <span>篇章目錄</span>
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- 側邊導覽列 -->
-  <aside class="sidebar" id="sidebar">
-    <div class="site-brand">
-      <h1>走進消失ing<br>的警舍街角</h1>
-      <div class="subtitle">新店七張警察眷舍與仁愛里紀錄</div>
+  <!-- 篇章抽屜導覽 -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer()"></div>
+  <aside class="drawer-panel" id="drawerPanel">
+    <div class="drawer-header">
+      <div class="drawer-title">篇章目錄</div>
+      <button type="button" class="drawer-close" onclick="toggleDrawer()" aria-label="關閉選單">✕</button>
     </div>
-    <ul class="nav-menu">
-  <li class="nav-item"><a href="index.html" class="nav-link">首頁</a></li>
-  <li class="nav-item"><a href="walk-0302.html" class="nav-link active">0302 社區走讀</a></li>
-  <li class="nav-item"><a href="old-photos.html" class="nav-link">老照片 vs. 現在</a></li>
-  <li class="nav-item"><a href="plants.html" class="nav-link">警舍周遭植物圖鑑</a></li>
-  <li class="nav-item"><a href="story-looking-up.html" class="nav-link">故事：仰望的日子</a></li>
-  <li class="nav-item"><a href="creative-works.html" class="nav-link">延伸創作</a></li>
-  <li class="nav-item"><a href="map-poster.html" class="nav-link">警舍地圖壁報＋發想</a></li>
-  <li class="nav-item"><a href="google-my-map.html" class="nav-link">Google My Map</a></li>
-  <li class="nav-item"><a href="landscape-compare.html" class="nav-link">地景對比</a></li>
-  <li class="nav-item"><a href="story-tsai.html" class="nav-link">故事：財哥</a></li>
-  <li class="nav-item"><a href="story-renai.html" class="nav-link">故事：仁愛里的仁愛人</a></li>
-  <li class="nav-item"><a href="story-kun.html" class="nav-link">故事：街訪坤哥</a></li>
-  <li class="nav-item"><a href="story-police-wife.html" class="nav-link">故事：警察的家後</a></li>
-  <li class="nav-item"><a href="ai-class-notes.html" class="nav-link">AI幫幫忙上課紀錄</a></li>
-  <li class="nav-item"><a href="conan-ai-story.html" class="nav-link">柯南教你用AI寫故事</a></li>
-  <li class="nav-item"><a href="line-to-story.html" class="nav-link">從Line對話到故事</a></li>
+    <nav class="drawer-content">
+      <div class="nav-group-title">全景導讀與歷史</div>
+<ul class="drawer-menu">
+  <li><a href="index.html" class="drawer-link"><span class="nav-num">›</span><span>01 首頁・走進警舍街角</span></a></li>
+  <li><a href="walk-0302.html" class="drawer-link current"><span class="nav-num">›</span><span>02 社區走讀</span></a></li>
+  <li><a href="old-photos.html" class="drawer-link"><span class="nav-num">›</span><span>03 老照片對比</span></a></li>
+  <li><a href="plants.html" class="drawer-link"><span class="nav-num">›</span><span>04 植物圖鑑</span></a></li>
 </ul>
+<div class="nav-group-title">地景與田野發想</div>
+<ul class="drawer-menu">
+  <li><a href="story-looking-up.html" class="drawer-link"><span class="nav-num">›</span><span>05 仰望的日子</span></a></li>
+  <li><a href="creative-works.html" class="drawer-link"><span class="nav-num">›</span><span>06 延伸創作</span></a></li>
+  <li><a href="map-poster.html" class="drawer-link"><span class="nav-num">›</span><span>07 地圖壁報發想</span></a></li>
+  <li><a href="google-my-map.html" class="drawer-link"><span class="nav-num">›</span><span>08 Google My Map</span></a></li>
+  <li><a href="landscape-compare.html" class="drawer-link"><span class="nav-num">›</span><span>09 地景對比</span></a></li>
+</ul>
+<div class="nav-group-title">人物訪談與街訪故事</div>
+<ul class="drawer-menu">
+  <li><a href="story-tsai.html" class="drawer-link"><span class="nav-num">›</span><span>10 故事・財哥</span></a></li>
+  <li><a href="story-renai.html" class="drawer-link"><span class="nav-num">›</span><span>11 仁愛里的仁愛人</span></a></li>
+  <li><a href="story-kun.html" class="drawer-link"><span class="nav-num">›</span><span>12 街訪坤哥</span></a></li>
+  <li><a href="story-police-wife.html" class="drawer-link"><span class="nav-num">›</span><span>13 警察的家後</span></a></li>
+</ul>
+<div class="nav-group-title">AI共創與學習紀錄</div>
+<ul class="drawer-menu">
+  <li><a href="ai-class-notes.html" class="drawer-link"><span class="nav-num">›</span><span>14 AI上課紀錄</span></a></li>
+  <li><a href="conan-ai-story.html" class="drawer-link"><span class="nav-num">›</span><span>15 柯南教AI寫故事</span></a></li>
+  <li><a href="line-to-story.html" class="drawer-link"><span class="nav-num">›</span><span>16 從對話到故事</span></a></li>
+</ul>
+
+    </nav>
   </aside>
 
   <!-- 主要內容區 -->
-  <main class="main-wrapper">
-    <header class="page-header">
-      <h1 class="page-title">0302社區走讀</h1>
-    </header>
-    <article class="article-content">
-      <p>里里有故事散步地圖21個點(20260118踏查製做) - Google My Maps</p>
+  <main class="main-container">
+    <article class="article-hero">
+      <span class="hero-kicker">田野紀實</span>
+      <h1 class="article-title">0302 社區走讀紀錄</h1>
+      <div class="article-meta">
+        <span>分類：全景導讀與歷史</span>
+        <span>•</span>
+        <span>田野記錄整理：Abby</span>
+      </div>
+    </article>
+
+    <article class="article-body">
+      <p>0302社區走讀</p>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<div class="lead-box"><p><strong>里里有故事散步地圖21個點(20260118踏查製做) - Google My Maps</strong></p></div>
 <p>警察宿舍組P1-P7, 瑠公圳橋組B1-B7, 巿場美食組F1-F7</p>
 <p>Google Sites</p>
 <p>Report abuse</p>
@@ -53,21 +135,80 @@
 <p>Page updated</p>
 <p>Google Sites</p>
 <p>Report abuse</p>
-      <h2>本頁珍貴影像與檔案</h2>
-<div class="image-gallery">
-  <div class="gallery-item"><img src="images/image_013.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_014.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_015.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-</div>
+      
+      <section class="gallery-section">
+        <div class="gallery-heading">
+          <h2>本篇珍貴影像與田野檔案</h2>
+          <span class="gallery-count">共 3 張紀錄照片</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" onclick="openLightbox('images/image_013.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_013.jpg" alt="0302 社區走讀紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_014.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_014.jpg" alt="0302 社區走讀紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_015.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_015.jpg" alt="0302 社區走讀紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="sequence-nav" aria-label="篇章前後頁">
+  <a href="index.html" class="sequence-card">
+    <span class="sequence-label">← 上一篇</span>
+    <span class="sequence-title">走進消失ing的警舍街角</span>
+  </a>
+  <a href="old-photos.html" class="sequence-card" style="text-align: right;">
+    <span class="sequence-label">下一篇 →</span>
+    <span class="sequence-title">老照片 vs. 現在</span>
+  </a>
+</nav>
 
     </article>
   </main>
 
+  <!-- 圖片燈箱 Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+      <img src="" alt="放大預覽" class="lightbox-img" id="lightboxImg">
+    </div>
+  </div>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-copy">走進消失ing的警舍街角・新店七張警察眷舍與仁愛里田野紀錄</div>
+      <a href="#top" class="back-to-top">回到頁首 ↑</a>
+    </div>
+  </footer>
+
   <script>
-    function toggleMenu() {
-      var sidebar = document.getElementById('sidebar');
-      sidebar.classList.toggle('show');
+    function toggleDrawer() {
+      document.getElementById('drawerPanel').classList.toggle('active');
+      document.getElementById('drawerBackdrop').classList.toggle('active');
+    }
+
+    function openLightbox(src) {
+      var modal = document.getElementById('lightboxModal');
+      var img = document.getElementById('lightboxImg');
+      img.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightboxModal').classList.remove('active');
+      }
     }
   </script>
+
 </body>
 </html>

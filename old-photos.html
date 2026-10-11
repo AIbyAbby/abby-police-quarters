@@ -1,51 +1,133 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2老照片 vs. 現在 - 走進消失ing的警舍街角</title>
+  <title>老照片 vs. 現在 ｜ 走進消失ing的警舍街角</title>
+  <meta name="description" content="新店七張警察眷舍與仁愛里社區發展紀錄：老照片 vs. 現在">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- 行動裝置頂部列 -->
-  <header class="mobile-header">
-    <div style="font-weight: bold; font-size: 1.1rem;">走進消失ing的警舍街角</div>
-    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+<body id="top">
+
+  <!-- 頂部主要導覽列 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a class="brand" href="index.html">
+        <span class="brand-title">走進消失ing的警舍街角</span>
+        <span class="brand-subtitle">新店七張警察眷舍與仁愛里紀錄</span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="nav-toggle-btn" onclick="toggleDrawer()" aria-label="開啟選單">
+          <span>篇章目錄</span>
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- 側邊導覽列 -->
-  <aside class="sidebar" id="sidebar">
-    <div class="site-brand">
-      <h1>走進消失ing<br>的警舍街角</h1>
-      <div class="subtitle">新店七張警察眷舍與仁愛里紀錄</div>
+  <!-- 篇章抽屜導覽 -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer()"></div>
+  <aside class="drawer-panel" id="drawerPanel">
+    <div class="drawer-header">
+      <div class="drawer-title">篇章目錄</div>
+      <button type="button" class="drawer-close" onclick="toggleDrawer()" aria-label="關閉選單">✕</button>
     </div>
-    <ul class="nav-menu">
-  <li class="nav-item"><a href="index.html" class="nav-link">首頁</a></li>
-  <li class="nav-item"><a href="walk-0302.html" class="nav-link">0302 社區走讀</a></li>
-  <li class="nav-item"><a href="old-photos.html" class="nav-link active">老照片 vs. 現在</a></li>
-  <li class="nav-item"><a href="plants.html" class="nav-link">警舍周遭植物圖鑑</a></li>
-  <li class="nav-item"><a href="story-looking-up.html" class="nav-link">故事：仰望的日子</a></li>
-  <li class="nav-item"><a href="creative-works.html" class="nav-link">延伸創作</a></li>
-  <li class="nav-item"><a href="map-poster.html" class="nav-link">警舍地圖壁報＋發想</a></li>
-  <li class="nav-item"><a href="google-my-map.html" class="nav-link">Google My Map</a></li>
-  <li class="nav-item"><a href="landscape-compare.html" class="nav-link">地景對比</a></li>
-  <li class="nav-item"><a href="story-tsai.html" class="nav-link">故事：財哥</a></li>
-  <li class="nav-item"><a href="story-renai.html" class="nav-link">故事：仁愛里的仁愛人</a></li>
-  <li class="nav-item"><a href="story-kun.html" class="nav-link">故事：街訪坤哥</a></li>
-  <li class="nav-item"><a href="story-police-wife.html" class="nav-link">故事：警察的家後</a></li>
-  <li class="nav-item"><a href="ai-class-notes.html" class="nav-link">AI幫幫忙上課紀錄</a></li>
-  <li class="nav-item"><a href="conan-ai-story.html" class="nav-link">柯南教你用AI寫故事</a></li>
-  <li class="nav-item"><a href="line-to-story.html" class="nav-link">從Line對話到故事</a></li>
+    <nav class="drawer-content">
+      <div class="nav-group-title">全景導讀與歷史</div>
+<ul class="drawer-menu">
+  <li><a href="index.html" class="drawer-link"><span class="nav-num">›</span><span>01 首頁・走進警舍街角</span></a></li>
+  <li><a href="walk-0302.html" class="drawer-link"><span class="nav-num">›</span><span>02 社區走讀</span></a></li>
+  <li><a href="old-photos.html" class="drawer-link current"><span class="nav-num">›</span><span>03 老照片對比</span></a></li>
+  <li><a href="plants.html" class="drawer-link"><span class="nav-num">›</span><span>04 植物圖鑑</span></a></li>
 </ul>
+<div class="nav-group-title">地景與田野發想</div>
+<ul class="drawer-menu">
+  <li><a href="story-looking-up.html" class="drawer-link"><span class="nav-num">›</span><span>05 仰望的日子</span></a></li>
+  <li><a href="creative-works.html" class="drawer-link"><span class="nav-num">›</span><span>06 延伸創作</span></a></li>
+  <li><a href="map-poster.html" class="drawer-link"><span class="nav-num">›</span><span>07 地圖壁報發想</span></a></li>
+  <li><a href="google-my-map.html" class="drawer-link"><span class="nav-num">›</span><span>08 Google My Map</span></a></li>
+  <li><a href="landscape-compare.html" class="drawer-link"><span class="nav-num">›</span><span>09 地景對比</span></a></li>
+</ul>
+<div class="nav-group-title">人物訪談與街訪故事</div>
+<ul class="drawer-menu">
+  <li><a href="story-tsai.html" class="drawer-link"><span class="nav-num">›</span><span>10 故事・財哥</span></a></li>
+  <li><a href="story-renai.html" class="drawer-link"><span class="nav-num">›</span><span>11 仁愛里的仁愛人</span></a></li>
+  <li><a href="story-kun.html" class="drawer-link"><span class="nav-num">›</span><span>12 街訪坤哥</span></a></li>
+  <li><a href="story-police-wife.html" class="drawer-link"><span class="nav-num">›</span><span>13 警察的家後</span></a></li>
+</ul>
+<div class="nav-group-title">AI共創與學習紀錄</div>
+<ul class="drawer-menu">
+  <li><a href="ai-class-notes.html" class="drawer-link"><span class="nav-num">›</span><span>14 AI上課紀錄</span></a></li>
+  <li><a href="conan-ai-story.html" class="drawer-link"><span class="nav-num">›</span><span>15 柯南教AI寫故事</span></a></li>
+  <li><a href="line-to-story.html" class="drawer-link"><span class="nav-num">›</span><span>16 從對話到故事</span></a></li>
+</ul>
+
+    </nav>
   </aside>
 
   <!-- 主要內容區 -->
-  <main class="main-wrapper">
-    <header class="page-header">
-      <h1 class="page-title">2老照片 vs. 現在</h1>
-    </header>
-    <article class="article-content">
-      <h3>老照片vs. 現在</h3>
+  <main class="main-container">
+    <article class="article-hero">
+      <span class="hero-kicker">歲月影像</span>
+      <h1 class="article-title">老照片 vs. 現在</h1>
+      <div class="article-meta">
+        <span>分類：全景導讀與歷史</span>
+        <span>•</span>
+        <span>田野記錄整理：Abby</span>
+      </div>
+    </article>
+
+    <article class="article-body">
+      <p>2老照片 vs. 現在</p>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>老照片vs. 現在</p>
 <p>01｜生活綠廊小公園（原街角警察宿舍）</p>
 <p>這裡曾是位於博愛街與中正路街角的警察宿舍。當年住戶在庭院中細心擺放盆栽販售，每一盆植物不僅種下綠意，更承載著家庭的溫柔與盼望。如今，老屋拆除後已化為生活綠廊小公園，時間雖帶走了建築，卻留下這份溫馨的日常記憶。</p>
 <p>2009</p>
@@ -199,7 +281,7 @@
 <p>2025</p>
 <p>建築物的外壁逐漸老舊讀得出來 是該都更了</p>
 <p>即將都更</p>
-<h3>故事散步地圖──《房子記得，我也記得》：17個點的記憶</h3>
+<div class="lead-box"><p><strong>故事散步地圖──《房子記得，我也記得》：17個點的記憶</strong></p></div>
 <p>我又走回這條街。風吹過來的時候，有一種味道，很淡，但好像從記憶裡滲出來。</p>
 <p>走到「生活綠廊小公園」的時候，我停了下來。以前這裡是警察宿舍，院子裡擺滿了盆栽，每一盆都像是有人偷偷放進去的小心願。現在盆栽不見了，只剩下搖晃的樹影，可我總覺得，它們還在等誰回家。</p>
 <p>轉過那個角落，就是「金石堂和搖滾披薩」。這裡以前是診所和藥廠，藥味會從門縫裡飄出來；而現在，換成了烤箱裡的麵香，熱騰騰的，把整條街都暖了起來。味道變了，可那種守護的心意，好像沒有變過。</p>
@@ -274,110 +356,525 @@
 <p>Page updated</p>
 <p>Google Sites</p>
 <p>Report abuse</p>
-      <h2>本頁珍貴影像與檔案</h2>
-<div class="image-gallery">
-  <div class="gallery-item"><img src="images/image_016.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_017.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_018.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_019.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_020.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_021.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_022.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_023.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_024.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_025.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_026.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_027.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_028.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_029.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_030.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_031.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_032.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_033.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_034.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_035.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_036.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_037.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_038.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_039.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_040.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_041.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_042.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_043.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_044.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_045.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_046.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_047.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_048.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_049.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_050.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_051.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_052.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_053.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_054.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_055.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_056.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_057.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_058.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_059.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_060.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_061.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_062.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_063.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_064.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_065.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_066.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_067.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_068.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_069.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_070.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_071.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_072.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_073.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_074.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_075.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_076.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_077.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_078.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_079.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_080.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_081.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_082.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_083.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_084.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_085.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_086.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_087.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_088.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_089.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_090.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_091.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_092.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_093.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_094.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_095.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_096.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_097.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_098.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_099.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_100.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_101.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_102.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_103.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_104.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_105.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_106.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_107.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-</div>
+      
+      <section class="gallery-section">
+        <div class="gallery-heading">
+          <h2>本篇珍貴影像與田野檔案</h2>
+          <span class="gallery-count">共 92 張紀錄照片</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" onclick="openLightbox('images/image_016.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_016.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_017.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_017.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_018.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_018.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_019.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_019.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_020.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_020.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_021.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_021.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_022.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_022.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_023.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_023.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_024.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_024.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_025.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_025.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_026.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_026.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_027.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_027.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_028.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_028.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_029.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_029.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_030.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_030.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_031.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_031.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_032.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_032.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_033.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_033.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_034.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_034.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_035.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_035.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_036.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_036.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_037.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_037.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_038.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_038.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_039.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_039.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_040.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_040.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_041.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_041.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_042.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_042.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_043.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_043.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_044.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_044.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_045.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_045.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_046.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_046.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_047.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_047.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_048.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_048.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_049.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_049.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_050.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_050.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_051.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_051.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_052.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_052.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_053.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_053.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_054.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_054.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_055.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_055.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_056.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_056.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_057.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_057.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_058.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_058.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_059.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_059.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_060.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_060.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_061.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_061.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_062.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_062.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_063.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_063.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_064.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_064.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_065.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_065.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_066.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_066.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_067.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_067.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_068.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_068.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_069.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_069.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_070.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_070.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_071.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_071.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_072.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_072.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_073.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_073.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_074.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_074.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_075.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_075.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_076.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_076.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_077.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_077.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_078.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_078.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_079.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_079.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_080.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_080.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_081.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_081.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_082.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_082.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_083.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_083.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_084.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_084.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_085.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_085.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_086.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_086.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_087.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_087.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_088.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_088.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_089.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_089.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_090.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_090.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_091.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_091.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_092.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_092.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_093.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_093.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_094.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_094.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_095.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_095.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_096.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_096.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_097.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_097.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_098.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_098.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_099.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_099.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_100.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_100.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_101.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_101.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_102.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_102.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_103.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_103.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_104.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_104.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_105.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_105.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_106.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_106.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_107.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_107.jpg" alt="老照片 vs. 現在 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="sequence-nav" aria-label="篇章前後頁">
+  <a href="walk-0302.html" class="sequence-card">
+    <span class="sequence-label">← 上一篇</span>
+    <span class="sequence-title">0302 社區走讀紀錄</span>
+  </a>
+  <a href="plants.html" class="sequence-card" style="text-align: right;">
+    <span class="sequence-label">下一篇 →</span>
+    <span class="sequence-title">警舍周遭植物圖鑑</span>
+  </a>
+</nav>
 
     </article>
   </main>
 
+  <!-- 圖片燈箱 Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+      <img src="" alt="放大預覽" class="lightbox-img" id="lightboxImg">
+    </div>
+  </div>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-copy">走進消失ing的警舍街角・新店七張警察眷舍與仁愛里田野紀錄</div>
+      <a href="#top" class="back-to-top">回到頁首 ↑</a>
+    </div>
+  </footer>
+
   <script>
-    function toggleMenu() {
-      var sidebar = document.getElementById('sidebar');
-      sidebar.classList.toggle('show');
+    function toggleDrawer() {
+      document.getElementById('drawerPanel').classList.toggle('active');
+      document.getElementById('drawerBackdrop').classList.toggle('active');
+    }
+
+    function openLightbox(src) {
+      var modal = document.getElementById('lightboxModal');
+      var img = document.getElementById('lightboxImg');
+      img.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightboxModal').classList.remove('active');
+      }
     }
   </script>
+
 </body>
 </html>

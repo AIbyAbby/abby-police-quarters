@@ -1,64 +1,145 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>11故事街訪坤哥 - 走進消失ing的警舍街角</title>
+  <title>街訪坤哥 ｜ 走進消失ing的警舍街角</title>
+  <meta name="description" content="新店七張警察眷舍與仁愛里社區發展紀錄：街訪坤哥">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- 行動裝置頂部列 -->
-  <header class="mobile-header">
-    <div style="font-weight: bold; font-size: 1.1rem;">走進消失ing的警舍街角</div>
-    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+<body id="top">
+
+  <!-- 頂部主要導覽列 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a class="brand" href="index.html">
+        <span class="brand-title">走進消失ing的警舍街角</span>
+        <span class="brand-subtitle">新店七張警察眷舍與仁愛里紀錄</span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="nav-toggle-btn" onclick="toggleDrawer()" aria-label="開啟選單">
+          <span>篇章目錄</span>
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- 側邊導覽列 -->
-  <aside class="sidebar" id="sidebar">
-    <div class="site-brand">
-      <h1>走進消失ing<br>的警舍街角</h1>
-      <div class="subtitle">新店七張警察眷舍與仁愛里紀錄</div>
+  <!-- 篇章抽屜導覽 -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer()"></div>
+  <aside class="drawer-panel" id="drawerPanel">
+    <div class="drawer-header">
+      <div class="drawer-title">篇章目錄</div>
+      <button type="button" class="drawer-close" onclick="toggleDrawer()" aria-label="關閉選單">✕</button>
     </div>
-    <ul class="nav-menu">
-  <li class="nav-item"><a href="index.html" class="nav-link">首頁</a></li>
-  <li class="nav-item"><a href="walk-0302.html" class="nav-link">0302 社區走讀</a></li>
-  <li class="nav-item"><a href="old-photos.html" class="nav-link">老照片 vs. 現在</a></li>
-  <li class="nav-item"><a href="plants.html" class="nav-link">警舍周遭植物圖鑑</a></li>
-  <li class="nav-item"><a href="story-looking-up.html" class="nav-link">故事：仰望的日子</a></li>
-  <li class="nav-item"><a href="creative-works.html" class="nav-link">延伸創作</a></li>
-  <li class="nav-item"><a href="map-poster.html" class="nav-link">警舍地圖壁報＋發想</a></li>
-  <li class="nav-item"><a href="google-my-map.html" class="nav-link">Google My Map</a></li>
-  <li class="nav-item"><a href="landscape-compare.html" class="nav-link">地景對比</a></li>
-  <li class="nav-item"><a href="story-tsai.html" class="nav-link">故事：財哥</a></li>
-  <li class="nav-item"><a href="story-renai.html" class="nav-link">故事：仁愛里的仁愛人</a></li>
-  <li class="nav-item"><a href="story-kun.html" class="nav-link active">故事：街訪坤哥</a></li>
-  <li class="nav-item"><a href="story-police-wife.html" class="nav-link">故事：警察的家後</a></li>
-  <li class="nav-item"><a href="ai-class-notes.html" class="nav-link">AI幫幫忙上課紀錄</a></li>
-  <li class="nav-item"><a href="conan-ai-story.html" class="nav-link">柯南教你用AI寫故事</a></li>
-  <li class="nav-item"><a href="line-to-story.html" class="nav-link">從Line對話到故事</a></li>
+    <nav class="drawer-content">
+      <div class="nav-group-title">全景導讀與歷史</div>
+<ul class="drawer-menu">
+  <li><a href="index.html" class="drawer-link"><span class="nav-num">›</span><span>01 首頁・走進警舍街角</span></a></li>
+  <li><a href="walk-0302.html" class="drawer-link"><span class="nav-num">›</span><span>02 社區走讀</span></a></li>
+  <li><a href="old-photos.html" class="drawer-link"><span class="nav-num">›</span><span>03 老照片對比</span></a></li>
+  <li><a href="plants.html" class="drawer-link"><span class="nav-num">›</span><span>04 植物圖鑑</span></a></li>
 </ul>
+<div class="nav-group-title">地景與田野發想</div>
+<ul class="drawer-menu">
+  <li><a href="story-looking-up.html" class="drawer-link"><span class="nav-num">›</span><span>05 仰望的日子</span></a></li>
+  <li><a href="creative-works.html" class="drawer-link"><span class="nav-num">›</span><span>06 延伸創作</span></a></li>
+  <li><a href="map-poster.html" class="drawer-link"><span class="nav-num">›</span><span>07 地圖壁報發想</span></a></li>
+  <li><a href="google-my-map.html" class="drawer-link"><span class="nav-num">›</span><span>08 Google My Map</span></a></li>
+  <li><a href="landscape-compare.html" class="drawer-link"><span class="nav-num">›</span><span>09 地景對比</span></a></li>
+</ul>
+<div class="nav-group-title">人物訪談與街訪故事</div>
+<ul class="drawer-menu">
+  <li><a href="story-tsai.html" class="drawer-link"><span class="nav-num">›</span><span>10 故事・財哥</span></a></li>
+  <li><a href="story-renai.html" class="drawer-link"><span class="nav-num">›</span><span>11 仁愛里的仁愛人</span></a></li>
+  <li><a href="story-kun.html" class="drawer-link current"><span class="nav-num">›</span><span>12 街訪坤哥</span></a></li>
+  <li><a href="story-police-wife.html" class="drawer-link"><span class="nav-num">›</span><span>13 警察的家後</span></a></li>
+</ul>
+<div class="nav-group-title">AI共創與學習紀錄</div>
+<ul class="drawer-menu">
+  <li><a href="ai-class-notes.html" class="drawer-link"><span class="nav-num">›</span><span>14 AI上課紀錄</span></a></li>
+  <li><a href="conan-ai-story.html" class="drawer-link"><span class="nav-num">›</span><span>15 柯南教AI寫故事</span></a></li>
+  <li><a href="line-to-story.html" class="drawer-link"><span class="nav-num">›</span><span>16 從對話到故事</span></a></li>
+</ul>
+
+    </nav>
   </aside>
 
   <!-- 主要內容區 -->
-  <main class="main-wrapper">
-    <header class="page-header">
-      <h1 class="page-title">11故事街訪坤哥</h1>
-    </header>
-    <article class="article-content">
-      <p>街訪坤哥</p>
-<p>母親的眼淚,改寫的人生——街訪坤哥的生命故事</p>
+  <main class="main-container">
+    <article class="article-hero">
+      <span class="hero-kicker">在地心聲</span>
+      <h1 class="article-title">街訪坤哥</h1>
+      <div class="article-meta">
+        <span>分類：人物訪談與街訪故事</span>
+        <span>•</span>
+        <span>田野記錄整理：Abby</span>
+      </div>
+    </article>
+
+    <article class="article-body">
+      <h3>11故事街訪坤哥</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<div class="lead-box"><p><strong>母親的眼淚,改寫的人生——街訪坤哥的生命故事</strong></p></div>
 <p>序章:命運的重擊</p>
 <p>那天,救護車的鳴笛聲劃破了雲林小鎮的寧靜。坤哥的父親躺在病床上,醫生搖頭宣告:「已經沒有希望了。」一個四歲男孩的世界瞬間崩塌。</p>
-<p>然而,上天似乎還不忍心讓這個家庭破碎。三個月的昏迷後,奇蹟發生了——父親睜開了雙眼。從鬼門關走了一遭的父親,從此變了一個人。曾經叱吒風雲的水果大盤商,如今推著小推車在街頭叫賣,只為了讓三個孩子有口飯吃。</p>
+<div class="lead-box"><p><strong>然而,上天似乎還不忍心讓這個家庭破碎。三個月的昏迷後,奇蹟發生了——父親睜開了雙眼。從鬼門關走了一遭的父親,從此變了一個人。曾經叱吒風雲的水果大盤商,如今推著小推車在街頭叫賣,只為了讓三個孩子有口飯吃。</strong></p></div>
 <p>年幼的坤哥不懂大人的世界,只知道家裡的笑聲少了,擔憂多了。父親的背影越來越駝,母親的白髮越來越多。而在他小小的心靈深處,一顆名為「憤怒」的種子正在悄悄發芽。</p>
 <p>第一章:走向黑暗的歲月</p>
 <p>歲月如刀,在坤哥心中刻下了深深的傷痕。</p>
-<p>高中的坤哥,已經不是當年那個天真的孩子。他的眼神變得冰冷,拳頭變得堅硬。街頭巷尾的打鬥,深夜的流連忘返,甚至手中握過的那把冰冷刀子——這一切都在向世界宣告:「我不在乎!」</p>
+<div class="lead-box"><p><strong>高中的坤哥,已經不是當年那個天真的孩子。他的眼神變得冰冷,拳頭變得堅硬。街頭巷尾的打鬥,深夜的流連忘返,甚至手中握過的那把冰冷刀子——這一切都在向世界宣告:「我不在乎!」</strong></p></div>
 <p>老師們搖頭,同學們避讓,連他自己都覺得,這輩子大概就這樣了。反正,老天已經對劉家夠殘酷了,為什麼還要假裝做個好人?</p>
-<p>直到那一天——被學校約談的日子到了。</p>
+<div class="lead-box"><p><strong>直到那一天——被學校約談的日子到了。</strong></p></div>
 <p>第二章:母親的眼淚</p>
 <p>那是一個平凡的下午,卻註定要改變一個人的一生。</p>
-<p>坤哥在家門口等著母親從學校回來。他知道等待他的會是什麼——責罵、失望,或者更糟。但當母親出現在門口時,她的表情出奇地平靜。</p>
+<div class="lead-box"><p><strong>坤哥在家門口等著母親從學校回來。他知道等待他的會是什麼——責罵、失望,或者更糟。但當母親出現在門口時,她的表情出奇地平靜。</strong></p></div>
 <p>「你們劉家就只有你一個男孩子,」母親的聲音很輕,像羽毛一樣飄在空氣中,「你要做壞,我也沒辦法,你要自己想辦法。」</p>
 <p>就這樣,沒有歇斯底里,沒有聲嘶力竭。母親轉身走向洗衣盆,開始洗衣服。</p>
 <p>坤哥站在那裡,心中五味雜陳。他以為自己已經堅硬如石,什麼都不怕了。但母親的平靜,比任何責罵都要來得震撼。</p>
@@ -72,14 +153,14 @@
 <p>那是4月1日,距離大學聯考只剩下三個月。三個月,對於一個幾乎要被退學的問題學生來說,這似乎是不可能的任務。</p>
 <p>但奇蹟,往往發生在最不可能的時候。</p>
 <p>每天清晨,當第一縷陽光灑進神龕時,坤哥已經在那裡了。書本攤開,心靜如水。他不再是那個憤世嫉俗的少年,而是一個為了母親的笑容而拼搏的兒子。</p>
-<p>三個月後,放榜的那一天,坤哥看著榜單上自己的名字,幾乎不敢相信——成功大學,錄取了!</p>
+<div class="lead-box"><p><strong>三個月後,放榜的那一天,坤哥看著榜單上自己的名字,幾乎不敢相信——成功大學,錄取了!</strong></p></div>
 <p>當他興奮地跑回家告訴家人時,家人都以為他看錯了。「你再去確認一次,」父親說,「這種事情可不能搞錯。」</p>
 <p>第四章:母親的智慧</p>
 <p>更讓坤哥感動的是母親的反應。</p>
-<p>她沒有涕零狂喜,沒有炫耀,而是靜靜地給了他6000元——在那個年代,這是一筆不小的錢。</p>
+<div class="lead-box"><p><strong>她沒有涕零狂喜,沒有炫耀,而是靜靜地給了他6000元——在那個年代,這是一筆不小的錢。</strong></p></div>
 <p>「4/1-7/1這段期間,你那些兄弟會找你,發現找不到你會不知道你跑哪裡了,」母親溫和地說,「這些錢,你拿去跟你那些兄弟好好道別一下。」</p>
 <p>坤哥愣住了。他以為母親會要求他徹底斷絕那些「壞朋友」,但她沒有。相反地,她希望兒子能夠體面地告別過去,帶著尊嚴開始新的人生。</p>
-<p>那八天的告別酒,坤哥喝得很醉,也哭得很慘。不是為了失去,而是為了重生。他的兩個結拜兄弟也都考上了大學——一個清大,一個中正理工。三個曾經迷失的少年,都找到了屬於自己的路。</p>
+<div class="lead-box"><p><strong>那八天的告別酒,坤哥喝得很醉,也哭得很慘。不是為了失去,而是為了重生。他的兩個結拜兄弟也都考上了大學——一個清大,一個中正理工。三個曾經迷失的少年,都找到了屬於自己的路。</strong></p></div>
 <p>第五章:大學歲月的蛻變</p>
 <p>成功大學的校園裡,坤哥起初像一隻受傷的狼,獨來獨往。他習慣了孤獨,也害怕融入那些「好學生」的圈子。</p>
 <p>但生命總是在你最意想不到的時候,給你驚喜。</p>
@@ -91,7 +172,7 @@
 <p>那天是父親的忌日。坤哥要回嘉義掃墓,心情有些沉重。在台北車站,他和大學同學一起買票,兩人為了誰付錢而推讓著。</p>
 <p>站在後面的女孩被逗笑了。</p>
 <p>「小姐,你在笑什麼?」坤哥問道。</p>
-<p>這就是命運的開始。那個女孩叫妙菊,也要回南部掃墓——是她阿嬤的忌日。兩個失去親人的心靈,在這個特殊的日子裡相遇了。</p>
+<div class="lead-box"><p><strong>這就是命運的開始。那個女孩叫妙菊,也要回南部掃墓——是她阿嬤的忌日。兩個失去親人的心靈,在這個特殊的日子裡相遇了。</strong></p></div>
 <p>更神奇的是,當他們第一次約會時,妙菊點的竟然是素炒麵。</p>
 <p>「你也吃素嗎?」坤哥震驚地問道。</p>
 <p>「對啊!」妙菊微笑著點頭。</p>
@@ -111,13 +192,13 @@
 <p>從被愛到施愛,從接受關懷到給予溫暖,這就是生命最美的循環。</p>
 <p>尾聲:那滴眼淚的永恆力量</p>
 <p>坤哥常說,他要等大廟落成時,就要完成自己的傳記。因為他相信,一個人的故事沒有結束,就不該輕易下結論。</p>
-<p>但如果要為這個故事下一個註解,那就是:</p>
+<h3>但如果要為這個故事下一個註解,那就是:</h3>
 <p>愛,永遠比恨更有力量。</p>
 <p>一滴母親的眼淚,勝過千言萬語的說教。它不僅洗滌了一個迷失靈魂的黑暗,更點亮了無數人心中的希望之光。</p>
 <p>今天的坤哥,每當看到迷茫的年輕人,都會想起當年的自己。他會告訴他們:「不要怕犯錯,不要怕跌倒。只要你願意為愛你的人改變,任何時候都不算晚。」</p>
 <p>因為他知道,在這個世界上,永遠有人在等你回家。而那個人,就是你的力量來源。</p>
 <p>母親的眼淚,不是絕望的象徵,而是愛的見證。那一滴眼淚,點亮了一個人的整個人生,也照亮了無數人前行的路。</p>
-<p>這就是坤哥的故事——一個從黑暗走向光明,從迷失走向希望的真實故事。它告訴我們:</p>
+<div class="lead-box"><p><strong>這就是坤哥的故事——一個從黑暗走向光明,從迷失走向希望的真實故事。它告訴我們:</strong></p></div>
 <p>只要心中還有愛,生命就有無限可能。</p>
 <p>巧遇</p>
 <p>坤哥</p>
@@ -130,7 +211,7 @@
 <p>從一條狹窄的小巷盡頭，坤哥身著一襲白色唐衫，腳步輕鬆，閒適地朝我們走來。一看到熟識的坤哥，玉芳立刻熱情地揮手，親切地和他閒話家常。大家圍攏在一起，一場對話就這麼自然地展開了。</p>
 <p>玉芳：我們剛訪問完財哥。我們在做「里里有故事」的專案，這次我們就是要做仁愛里與忠誠里的地景，所以就請伯健里長推薦一位受訪者，他推薦了財哥。</p>
 <p>Abby：坤哥你是在地人，那你是否知道這裡是否有什麼比較特別的人？或是你印象中，你覺得很特別的事，可以跟我們分享。</p>
-<p>玉芳：因為我們想寫社區故事。</p>
+<h3>玉芳：因為我們想寫社區故事。</h3>
 <p>Abby：坤哥，我覺得你看起來，就是很會講故事的人。</p>
 <p>玉芳：阿坤，你應該沒想到回家遇到攔路虎，回家門口遇到我們這三隻母老虎。</p>
 <p>坤哥：對於這個社區，我其實並沒有很熟悉這裡的人事物啦！</p>
@@ -146,14 +227,14 @@
 <p>坤哥：呃！那時候，我住在新店光明街。</p>
 <p>Abby：所以坤哥和太太是坐火車認識的？好浪漫喔！今天剛好情人節，可以好好回憶一下。</p>
 <p>坤哥：嗯！我以前有一位好朋友也嚇一跳！</p>
-<p>Abby：你的故事很特別耶！</p>
-<p>坤哥：喔！其實我的故事可以寫書ㄟ。</p>
+<h3>Abby：你的故事很特別耶！</h3>
+<h3>坤哥：喔！其實我的故事可以寫書ㄟ。</h3>
 <p>玉芳：真的可以！</p>
 <p>坤哥：而且，我也準備寫自傳啊！只是，不怎麼有時間而已啦！</p>
 <p>Abby：那這樣子很好喔！</p>
-<p>玉芳：阿坤一生的故事很精采！</p>
-<p>坤哥：但是，我的故事都是血淚ㄟ！</p>
-<p>Abby：這樣故事的豐富度，我們最喜歡。</p>
+<h3>玉芳：阿坤一生的故事很精采！</h3>
+<h3>坤哥：但是，我的故事都是血淚ㄟ！</h3>
+<h3>Abby：這樣故事的豐富度，我們最喜歡。</h3>
 <p>坤哥：好血腥喔！</p>
 <p>玉芳：那我可能要先離開。啊，你們自己聊囉！互相留聯絡資訊，可以。</p>
 <p>坤哥：啊，我不曉得能幫什麼忙？</p>
@@ -163,7 +244,7 @@
 <p>玉芳：對。</p>
 <p>坤哥：財哥，你要去哪裡？</p>
 <p>財哥：我要去接孫子！</p>
-<h3>玉芳：財哥，來得好，我們一起拍一張照片！</h3>
+<p>玉芳：財哥，來得好，我們一起拍一張照片！</p>
 <p>財哥：阿坤，最近比較黑喔！</p>
 <p>坤哥：對，曬得蠻嚴重的。就是禮拜二去山上，去道場做志工。。</p>
 <p>財哥：好，不好意思，我要去載孫子！</p>
@@ -171,7 +252,7 @@
 <p>Abby：喔！所以你在這邊，也住了……？</p>
 <p>坤哥：我81年住到這邊來，已經住了33年了。</p>
 <p>Abby：所以你的故事是在這邊發生的？還是之前就發生的？</p>
-<p>坤哥：我的故事，是從我四歲就開始有故事了。</p>
+<h3>坤哥：我的故事，是從我四歲就開始有故事了。</h3>
 <p>Abby和Sue十分驚</p>
 <p>坤哥：我的父親發生一場車禍，醫生宣佈死亡，但他昏迷了三個月，然後就自己醒過來，他沒有死。醒來後，就總是要養家糊口啊！他本來是我們雲林嘉義台南的水果大盤商，後來改成去賣小小水果，把我們三個小孩拉拔長大。我一直謝謝老天這麼眷顧我啦！讓我很順利的，雖然我的心理狀態是不健康的。我必須承認，我在進入職場的大概一兩年，心理陰霾很重，因為之前受傷很重。</p>
 <p>Abby：家庭若有什麼變故，其實孩子很辛苦！</p>
@@ -245,7 +326,7 @@
 <p>坤哥：講到我結婚後……。</p>
 <p>Abby：坤哥結婚後你有幾個小孩？</p>
 <p>坤哥：三個小孩。</p>
-<p>Sue：接下來是生兒育女的故事了。</p>
+<h3>Sue：接下來是生兒育女的故事了。</h3>
 <p>Abby：接下來小孩子就漸漸地長大。</p>
 <p>坤哥：其實我不是一個很盡責的父親啦！因為我一直工作都很忙，忙到有一天我媽媽告訴我：你只知道你小孩的長度，卻不知道他們的高度。因為我忙到回家的時候，他們都已經睡了。</p>
 <p>Sue：劉媽媽好幽默唷！</p>
@@ -285,10 +366,10 @@
 <p>聊完之後，她的兒子是科技公司的財務長特地撥電話給我說：謝謝你喔！來我家跟我媽講這麼多話。</p>
 <p>坤哥：我說OK啊！是我應該感謝你們，是老人家願意讓我講、聽我講。讓我的關愛有地方落腳！謝謝妳們！妳們願意讓我講這麼多事情。</p>
 <h3>Abby：</h3>
-<p>真的是很棒的故事！謝謝。</p>
+<h3>真的是很棒的故事！謝謝。</h3>
 <p>我們深深敬佩劉媽媽的智慧與胸懷，感恩她用純粹的母愛拯救了一個迷失的靈魂。如今坤哥在道場做志工，關懷獨居長者，用愛心回饋社會的種種善行，都源自於母親當年在他心中種下的那顆愛的種子。那滴眼淚帶來的生命轉變，不僅改變了坤哥的人生軌跡，更透過他的善行與關懷，持續溫暖著更多需要愛的心靈，形成了愛的美好循環。</p>
 <p>劉媽媽的故事提醒我們：最偉大的教育來自最深沉的愛，最深刻的影響來自最無聲的感化。母親的智慧如春風化雨，潤物無聲，卻能在孩子心中種下希望的種子，綻放出生命中最美麗的花朵。</p>
-<p>「相逢即是有緣」——命運讓兩顆純淨的心在最美的時刻相遇。他們選擇茹素的生活，不僅是對生命的溫柔，更是彼此心靈的契合。從博愛街的「起家厝」開始，他們攜手走過歲月的每一個春夏秋冬，見證了三個孩子的歡聲笑語，在鄰里間留下最美的身影。歲月如歌，他們的愛情卻愈發深厚。每一次相視而笑，都是三十年如一日的深情；每一次並肩而行，都在訴說著不變的誓言。在博愛街這個充滿人情味的角落，他們用一生的時光證明了什麼叫「執子之手，與子偕老」。這份茹素牽手情，是街坊鄰居心中最溫暖的風景。</p>
+<div class="lead-box"><p><strong>「相逢即是有緣」——命運讓兩顆純淨的心在最美的時刻相遇。他們選擇茹素的生活，不僅是對生命的溫柔，更是彼此心靈的契合。從博愛街的「起家厝」開始，他們攜手走過歲月的每一個春夏秋冬，見證了三個孩子的歡聲笑語，在鄰里間留下最美的身影。歲月如歌，他們的愛情卻愈發深厚。每一次相視而笑，都是三十年如一日的深情；每一次並肩而行，都在訴說著不變的誓言。在博愛街這個充滿人情味的角落，他們用一生的時光證明了什麼叫「執子之手，與子偕老」。這份茹素牽手情，是街坊鄰居心中最溫暖的風景。</strong></p></div>
 <p>坤哥用他的親身經歷告訴我們，唯有家人的愛是永恆的港灣。</p>
 <p>珍惜身邊的親人，因為愛與包容永遠比怨恨更有力量。 母親的</p>
 <p>智慧話語、手足間的相互扶持，這些看似平凡的家庭溫暖，卻是支撐我們走過人生風雨的最強大力量。當我們學會寬恕與包容，心中的怨恨就會化為愛的養分。什麼是人生的意義？坤哥用他的行動給出了答案。</p>
@@ -296,10 +377,10 @@
 <p>坤哥的故事告訴我們，人生的精彩不在於起點有多高，而在於我們如何面對挫折、珍惜緣分，以及用什麼樣的心態去擁抱生活。。</p>
 <p>一滴眼淚如何改寫一生</p>
 <p>影片</p>
-<p>坤哥的故事</p>
+<h3>坤哥的故事</h3>
 <p>,點一下即可收</p>
-<p>坤哥的故事：一滴眼淚如何改寫一生.mp4</p>
-<p>轉角遇見故事</p>
+<h3>坤哥的故事：一滴眼淚如何改寫一生.mp4</h3>
+<h3>轉角遇見故事</h3>
 <p>每段對話都是一頁風景</p>
 <p>以金庸武俠小說的韻味和原故事的感人內核改編坤哥故事</p>
 <p>《白衫劍客傳》</p>
@@ -315,7 +396,7 @@
 <p>發誓後的坤育如換了個人，每日抱書入廟，在關帝神像前苦讀。他無意中發現廟中石碑後藏有一卷《靜心訣》，乃是道家基礎內功心法。</p>
 <p>坤育依法修練，短短三月內打通任督二脈，記憶力大增，悟性也隨之提升。鄉試放榜之日，竟高中解元，連他自己都不敢置信。</p>
 <p>其母賜銀六千兩，囑咐道：「兒啊，你既要走正道，那些江湖朋友也要好聚好散，莫要結下樑子。」</p>
-<p>坤育於是與兩位結拜兄弟——一個要入太學讀書，一個要投軍從武——連飲八日，灑淚而別。</p>
+<div class="lead-box"><p><strong>坤育於是與兩位結拜兄弟——一個要入太學讀書，一個要投軍從武——連飲八日，灑淚而別。</strong></p></div>
 <p>第四回：奇遇佳人 命定姻緣</p>
 <p>坤育進京趕考期間，憑藉一手精湛的「神筆丹青功」（繪畫技藝），被同窗推選為學社頭領。他辦事雷厲風行，深得師長信任。</p>
 <p>會試前夕，恰逢父親忌日，坤育要回鄉祭拜。在客棧碼頭巧遇一白衣女子唐妙菊，兩人都是為祭拜先人而南下。命運安排下，他們搭乘同一艘客船。</p>
@@ -363,38 +444,165 @@
 <p>Page updated</p>
 <p>Google Sites</p>
 <p>Report abuse</p>
-      <h2>本頁珍貴影像與檔案</h2>
-<div class="image-gallery">
-  <div class="gallery-item"><img src="images/image_179.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_180.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_181.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_182.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_183.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_184.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_185.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_186.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_187.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_188.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_189.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_190.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_191.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_192.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_193.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_194.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_195.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_196.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_197.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_198.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-</div>
+      
+      <section class="gallery-section">
+        <div class="gallery-heading">
+          <h2>本篇珍貴影像與田野檔案</h2>
+          <span class="gallery-count">共 20 張紀錄照片</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" onclick="openLightbox('images/image_179.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_179.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_180.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_180.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_181.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_181.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_182.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_182.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_183.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_183.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_184.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_184.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_185.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_185.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_186.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_186.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_187.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_187.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_188.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_188.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_189.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_189.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_190.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_190.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_191.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_191.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_192.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_192.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_193.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_193.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_194.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_194.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_195.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_195.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_196.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_196.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_197.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_197.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_198.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_198.jpg" alt="街訪坤哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="sequence-nav" aria-label="篇章前後頁">
+  <a href="story-renai.html" class="sequence-card">
+    <span class="sequence-label">← 上一篇</span>
+    <span class="sequence-title">仁愛里的仁愛人</span>
+  </a>
+  <a href="story-police-wife.html" class="sequence-card" style="text-align: right;">
+    <span class="sequence-label">下一篇 →</span>
+    <span class="sequence-title">警察的家後</span>
+  </a>
+</nav>
 
     </article>
   </main>
 
+  <!-- 圖片燈箱 Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+      <img src="" alt="放大預覽" class="lightbox-img" id="lightboxImg">
+    </div>
+  </div>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-copy">走進消失ing的警舍街角・新店七張警察眷舍與仁愛里田野紀錄</div>
+      <a href="#top" class="back-to-top">回到頁首 ↑</a>
+    </div>
+  </footer>
+
   <script>
-    function toggleMenu() {
-      var sidebar = document.getElementById('sidebar');
-      sidebar.classList.toggle('show');
+    function toggleDrawer() {
+      document.getElementById('drawerPanel').classList.toggle('active');
+      document.getElementById('drawerBackdrop').classList.toggle('active');
+    }
+
+    function openLightbox(src) {
+      var modal = document.getElementById('lightboxModal');
+      var img = document.getElementById('lightboxImg');
+      img.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightboxModal').classList.remove('active');
+      }
     }
   </script>
+
 </body>
 </html>

@@ -1,74 +1,156 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>9故事財哥 - 走進消失ing的警舍街角</title>
+  <title>人物故事：財哥 ｜ 走進消失ing的警舍街角</title>
+  <meta name="description" content="新店七張警察眷舍與仁愛里社區發展紀錄：人物故事：財哥">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- 行動裝置頂部列 -->
-  <header class="mobile-header">
-    <div style="font-weight: bold; font-size: 1.1rem;">走進消失ing的警舍街角</div>
-    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+<body id="top">
+
+  <!-- 頂部主要導覽列 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a class="brand" href="index.html">
+        <span class="brand-title">走進消失ing的警舍街角</span>
+        <span class="brand-subtitle">新店七張警察眷舍與仁愛里紀錄</span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="nav-toggle-btn" onclick="toggleDrawer()" aria-label="開啟選單">
+          <span>篇章目錄</span>
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- 側邊導覽列 -->
-  <aside class="sidebar" id="sidebar">
-    <div class="site-brand">
-      <h1>走進消失ing<br>的警舍街角</h1>
-      <div class="subtitle">新店七張警察眷舍與仁愛里紀錄</div>
+  <!-- 篇章抽屜導覽 -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer()"></div>
+  <aside class="drawer-panel" id="drawerPanel">
+    <div class="drawer-header">
+      <div class="drawer-title">篇章目錄</div>
+      <button type="button" class="drawer-close" onclick="toggleDrawer()" aria-label="關閉選單">✕</button>
     </div>
-    <ul class="nav-menu">
-  <li class="nav-item"><a href="index.html" class="nav-link">首頁</a></li>
-  <li class="nav-item"><a href="walk-0302.html" class="nav-link">0302 社區走讀</a></li>
-  <li class="nav-item"><a href="old-photos.html" class="nav-link">老照片 vs. 現在</a></li>
-  <li class="nav-item"><a href="plants.html" class="nav-link">警舍周遭植物圖鑑</a></li>
-  <li class="nav-item"><a href="story-looking-up.html" class="nav-link">故事：仰望的日子</a></li>
-  <li class="nav-item"><a href="creative-works.html" class="nav-link">延伸創作</a></li>
-  <li class="nav-item"><a href="map-poster.html" class="nav-link">警舍地圖壁報＋發想</a></li>
-  <li class="nav-item"><a href="google-my-map.html" class="nav-link">Google My Map</a></li>
-  <li class="nav-item"><a href="landscape-compare.html" class="nav-link">地景對比</a></li>
-  <li class="nav-item"><a href="story-tsai.html" class="nav-link active">故事：財哥</a></li>
-  <li class="nav-item"><a href="story-renai.html" class="nav-link">故事：仁愛里的仁愛人</a></li>
-  <li class="nav-item"><a href="story-kun.html" class="nav-link">故事：街訪坤哥</a></li>
-  <li class="nav-item"><a href="story-police-wife.html" class="nav-link">故事：警察的家後</a></li>
-  <li class="nav-item"><a href="ai-class-notes.html" class="nav-link">AI幫幫忙上課紀錄</a></li>
-  <li class="nav-item"><a href="conan-ai-story.html" class="nav-link">柯南教你用AI寫故事</a></li>
-  <li class="nav-item"><a href="line-to-story.html" class="nav-link">從Line對話到故事</a></li>
+    <nav class="drawer-content">
+      <div class="nav-group-title">全景導讀與歷史</div>
+<ul class="drawer-menu">
+  <li><a href="index.html" class="drawer-link"><span class="nav-num">›</span><span>01 首頁・走進警舍街角</span></a></li>
+  <li><a href="walk-0302.html" class="drawer-link"><span class="nav-num">›</span><span>02 社區走讀</span></a></li>
+  <li><a href="old-photos.html" class="drawer-link"><span class="nav-num">›</span><span>03 老照片對比</span></a></li>
+  <li><a href="plants.html" class="drawer-link"><span class="nav-num">›</span><span>04 植物圖鑑</span></a></li>
 </ul>
+<div class="nav-group-title">地景與田野發想</div>
+<ul class="drawer-menu">
+  <li><a href="story-looking-up.html" class="drawer-link"><span class="nav-num">›</span><span>05 仰望的日子</span></a></li>
+  <li><a href="creative-works.html" class="drawer-link"><span class="nav-num">›</span><span>06 延伸創作</span></a></li>
+  <li><a href="map-poster.html" class="drawer-link"><span class="nav-num">›</span><span>07 地圖壁報發想</span></a></li>
+  <li><a href="google-my-map.html" class="drawer-link"><span class="nav-num">›</span><span>08 Google My Map</span></a></li>
+  <li><a href="landscape-compare.html" class="drawer-link"><span class="nav-num">›</span><span>09 地景對比</span></a></li>
+</ul>
+<div class="nav-group-title">人物訪談與街訪故事</div>
+<ul class="drawer-menu">
+  <li><a href="story-tsai.html" class="drawer-link current"><span class="nav-num">›</span><span>10 故事・財哥</span></a></li>
+  <li><a href="story-renai.html" class="drawer-link"><span class="nav-num">›</span><span>11 仁愛里的仁愛人</span></a></li>
+  <li><a href="story-kun.html" class="drawer-link"><span class="nav-num">›</span><span>12 街訪坤哥</span></a></li>
+  <li><a href="story-police-wife.html" class="drawer-link"><span class="nav-num">›</span><span>13 警察的家後</span></a></li>
+</ul>
+<div class="nav-group-title">AI共創與學習紀錄</div>
+<ul class="drawer-menu">
+  <li><a href="ai-class-notes.html" class="drawer-link"><span class="nav-num">›</span><span>14 AI上課紀錄</span></a></li>
+  <li><a href="conan-ai-story.html" class="drawer-link"><span class="nav-num">›</span><span>15 柯南教AI寫故事</span></a></li>
+  <li><a href="line-to-story.html" class="drawer-link"><span class="nav-num">›</span><span>16 從對話到故事</span></a></li>
+</ul>
+
+    </nav>
   </aside>
 
   <!-- 主要內容區 -->
-  <main class="main-wrapper">
-    <header class="page-header">
-      <h1 class="page-title">9故事財哥</h1>
-    </header>
-    <article class="article-content">
-      <p>財哥</p>
+  <main class="main-container">
+    <article class="article-hero">
+      <span class="hero-kicker">口述歷史</span>
+      <h1 class="article-title">人物故事：財哥</h1>
+      <div class="article-meta">
+        <span>分類：人物訪談與街訪故事</span>
+        <span>•</span>
+        <span>田野記錄整理：Abby</span>
+      </div>
+    </article>
+
+    <article class="article-body">
+      <h3>9故事財哥</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>財哥</p>
 <p>下方影片 請點一下,等一下~</p>
-<p>社區的時代風華：博愛新村的故事.mp4</p>
+<h3>社區的時代風華：博愛新村的故事.mp4</h3>
 <h3>博愛新村的記憶拼圖：</h3>
 <p>致那些年，我們的歲月靜好</p>
-<p>夜色溫柔，像母親的手，輕撫著新店博愛新村每一條熟悉的街巷。財哥坐在那扇見證了三十年風雨的家門口，手中的茶杯還冒著熱氣，蒸騰的水氣模糊了眼鏡，也模糊了時光的界線。眼前的街景，在這片朦朧中，彷彿回到了三十年前——那個他意氣風發、懷著滿腔熱血踏進調查局的青春年代。如今歲月在他臉上刻下深深淺淺的印記，但那份對這片土地的眷戀，卻愈發濃烈，如陳年老酒，愈久愈香。</p>
+<div class="lead-box"><p><strong>夜色溫柔，像母親的手，輕撫著新店博愛新村每一條熟悉的街巷。財哥坐在那扇見證了三十年風雨的家門口，手中的茶杯還冒著熱氣，蒸騰的水氣模糊了眼鏡，也模糊了時光的界線。眼前的街景，在這片朦朧中，彷彿回到了三十年前——那個他意氣風發、懷著滿腔熱血踏進調查局的青春年代。如今歲月在他臉上刻下深深淺淺的印記，但那份對這片土地的眷戀，卻愈發濃烈，如陳年老酒，愈久愈香。</strong></p></div>
 <p>「那時候，這裡很特別，從沒看過廣告在賣，但就是賣給了公務員。」財哥的聲音裡帶著一絲驕傲，更多的是不捨。他閉上眼睛，彷彿還能聽見當年和太太為了湊那兩萬塊錢標會時的忙碌聲響。兩百多萬買下的不只是一間房子，更是一個家的開始，一個夢想的起點。那時候的鄰居們，大多是和他一樣的警察或調查局同事，大家都有著相似的背景，相同的信念，就像一個大家族般緊密相連。</p>
 <p>從舊時光影到今昔對望</p>
 <p>時光是個魔術師，悄悄地變換著這裡的容顏。財哥記得最清楚的，是那些「拆」的日子。他親眼看著社區從簡陋的鐵皮屋，一點一點地長高，長大，變成今天的模樣。每一次改建，都像是在翻閱一本厚重的相冊，翻過一頁，就是一段歲月。</p>
 <p>「以前這裡有芒果樹，有龍眼樹，幾個外省女孩還會爬上去玩耍。」他指著那塊如今被規劃成公園的空地，眼中閃爍著光芒。那些樹下的笑聲，那些天真無邪的臉龐，如今都成了心中最珍貴的寶藏。他想起隔壁那位姓賀的警官，脾氣雖然火爆，看到鐵架子擺在外面就會大聲喝斥，但每當鄰居有困難時，總是第一個站出來幫忙。那種不善言辭卻溫暖如火的情誼，在這個越來越冷漠的世界裡，顯得格外珍貴。</p>
 <p>這條路很窄，窄得連消防車都擠不進來。財哥永遠忘不了那次</p>
 <p>博愛街警察宿舍失火</p>
-<p>的夜晚，風很大，火舌像惡魔般張牙舞爪，眼看就要燒到這邊來。他二話不說抓起水管就衝了上去，和鄰居們一起拼命救火。那一刻，什麼都不重要了，重要的是守護這個家，守護這些一起生活了這麼多年的鄰居們。那驚心動魄的夜晚，如今想來，心中湧起的不是恐懼，而是滿滿的感動——為了這份患難見真情的鄰里情。</p>
+<div class="lead-box"><p><strong>的夜晚，風很大，火舌像惡魔般張牙舞爪，眼看就要燒到這邊來。他二話不說抓起水管就衝了上去，和鄰居們一起拼命救火。那一刻，什麼都不重要了，重要的是守護這個家，守護這些一起生活了這麼多年的鄰居們。那驚心動魄的夜晚，如今想來，心中湧起的不是恐懼，而是滿滿的感動——為了這份患難見真情的鄰里情。</strong></p></div>
 <p>不變的眷戀</p>
 <p>時間是最無情的小偷，悄悄地偷走了太多美好。這幾年，財哥看著老鄰居們一個個地離開，心中總是五味雜陳。有的遠赴美國，因為女兒嫁給了異國的愛情；有的與世長辭，留下空蕩蕩的房子和滿滿的回憶。每一次告別，都像是心上被輕輕撕去一角，疼痛卻又不捨。</p>
 <p>他特別記得湯先生，人在美國多年，卻始終不願賣掉這裡的房子，寧可租給別人。那份對故土的眷戀，對舊時光的不捨，財哥太能理解了。因為這裡不只是房子，更是青春的見證，是記憶的港灣。</p>
 <p>「我們這代的鄰居，年紀都差不多。」財哥</p>
 <p>從當年一起在這裡安家落戶的年輕夫妻，到如今兒女滿堂、各自天涯的花甲老人，這一路走來的酸甜苦辣，只有彼此最懂。前些日子，鄰居傳給他一張泛黃的舊照片，是當年四層樓房子剛蓋好時的模樣。看著那張照片，他的</p>
 <p>百感交集</p>
-<h3>，那不只是一張照片，更是他們共同青春的證明。</h3>
+<p>，那不只是一張照片，更是他們共同青春的證明。</p>
 <p>如今，公辦都更的消息傳來，新舊交替的輪迴又要開始了。那些陪伴了他大半輩子的鐵皮屋，那些見證過孩子們嬉戲的龍眼樹，都將成為歷史的塵埃。但財哥知道，真正重要的東西，是拆不掉的。</p>
-<p>這片土地給了他的，遠比一處住所更多——它是他青春的舞台，是他家庭的搖籃，是他與這群如家人般鄰居們共同編織的溫暖回憶。這些珍貴的片段，如同心靈深處最亮的星光，永遠指引著回家的路。</p>
+<div class="lead-box"><p><strong>這片土地給了他的，遠比一處住所更多——它是他青春的舞台，是他家庭的搖籃，是他與這群如家人般鄰居們共同編織的溫暖回憶。這些珍貴的片段，如同心靈深處最亮的星光，永遠指引著回家的路。</strong></p></div>
 <p>縱然舊景將逝，但那些深深烙印在心底的溫情，那些用歲月沉澱下來的真摯情感，將永遠在記憶的花園裡綻放，成為這片土地上最動人的詩篇，也是他們這一代人最珍貴的遺產。</p>
-<p>——仿鄭愁予《錯誤》</p>
+<div class="lead-box"><p><strong>——仿鄭愁予《錯誤》</strong></p></div>
 <p>我從調查局走過 那等在歲月裡的容顏如芒果花的開落</p>
 <p>都更不來，三十年的鐵皮屋不拆 你底心如小小的寂寞的村 恰若狹窄的巷弄向晚 蟲鳴不響，三月的春帷不揭 你底心是小小的窗扉緊掩</p>
 <p>我沉沉的腳步是美麗的錯誤 我不是過客，是個歸人……</p>
@@ -85,7 +167,7 @@
 <p>的開落</p>
 <p>拆遷將至，百年的樹影不移 我底心如小小的不捨的村 恰若青春的歲月向晚 鐘聲不響，昨日的歡聲不散 我底心是小小的寶藏深埋</p>
 <p>歲月深深的印記是美麗的恩賜 我不是過客，永遠是歸人……</p>
-<p>——仿鄭愁予《鄉愁》</p>
+<div class="lead-box"><p><strong>——仿鄭愁予《鄉愁》</strong></p></div>
 <p>年少時</p>
 <p>鄉愁是一張標會的收據</p>
 <p>我在這頭 夢想在那頭</p>
@@ -96,7 +178,7 @@
 <p>鄉愁是早出晚歸的腳步聲</p>
 <p>事業在那頭 孩子在這頭</p>
 <p>現在啊</p>
-<h3>鄉愁是一張泛黃的舊照片</h3>
+<p>鄉愁是一張泛黃的舊照片</p>
 <p>老鄰居在那頭 我在這頭</p>
 <p>三十年前</p>
 <p>財哥是一枚調查局的新章 蓋在博愛新村的公文上</p>
@@ -113,7 +195,7 @@
 <p>財哥專訪</p>
 <p>文字PODCAST</p>
 <p>歡迎收聽這次的深入探索。今天我們手上有一份很有意思的訪談記錄，來自新店仁愛里，主角是一位在社區住了幾十年的財哥。</p>
-<p>這份記錄就像一個時光膠囊，讓我們可以透過財哥的眼睛來看看一個地方——那種我們可能有點熟悉，但又不完全了解的地方——是怎麼一點一點變成現在這個樣子的。</p>
+<div class="lead-box"><p><strong>這份記錄就像一個時光膠囊，讓我們可以透過財哥的眼睛來看看一個地方——那種我們可能有點熟悉，但又不完全了解的地方——是怎麼一點一點變成現在這個樣子的。</strong></p></div>
 <p>我們的任務就是從他的回憶裡挖掘出這個社區的變遷軌跡，還有居民們那些獨特的故事，那些生活裡的小事、生活氣息。準備好一起來聽故事了嗎？</p>
 <p>這份訪談的價值在於個人視角。它不只是記錄哪個房子蓋了、哪個拆了，更捕捉到個人記憶怎麼跟大的時代背景交織在一起。像是都市發展，或是某個特定職業的人搬過來，這些因素怎麼互動？我們可以從中觀察到一個社區的「性格」是怎麼被塑造出來的。</p>
 <p>初來乍到：選擇這個地方的偶然</p>
@@ -124,12 +206,12 @@
 <p>社區的特殊性格：公務員聚落</p>
 <p>這個點很重要，他其實點出了很多新興社區在發展初期會有的現象。很多現在看起來機能很好的區域，一開始開發的時候都會給人很偏遠、交通不太方便的印象。</p>
 <p>財哥有提到，他們剛搬來的時候，這裡可能還不像現在這麼熱鬧，基礎設施什麼的可能也都還在慢慢蓋。這種從無到有的過程，其實就是都市擴張的一個見證。</p>
-<p>那在這樣一個慢慢發展起來的社區裡，住的都是些什麼樣的人呢？財哥特別講到這裡的住戶有一個很明顯的共同點——很多都是公務人員。</p>
+<div class="lead-box"><p><strong>那在這樣一個慢慢發展起來的社區裡，住的都是些什麼樣的人呢？財哥特別講到這裡的住戶有一個很明顯的共同點——很多都是公務人員。</strong></p></div>
 <p>這是訪談裡一個非常重要的線索。他好幾次提到鄰居是從警局的、調查局的、考試院、交通部，就是這些公家機關來的。甚至他自己，他說他當年也是因為想當公務人員，覺得比較穩定（鐵飯碗），才選擇加入調查局的。</p>
 <p>這很可能跟當時政府為了解決公務員的居住需求，有一些住宅政策或是宿舍分配有關。所以這不完全是大家自己選的，而是有點政策引導的感覺。</p>
 <p>可以這麼說，訪談裡有提到他們這邊70戶裡面，大概有七到八</p>
 <p>是透過服務單位分配來的。比例還不低呢！這就解釋了為什麼某個特定職業的人會集中住在這裡，這也讓我們想到，早期的社區規劃有時候是帶有某種社會功能性的。</p>
-<p>鄰里故事：既熟悉又陌生的關係</p>
+<h3>鄰里故事：既熟悉又陌生的關係</h3>
 <p>有了這個背景，再來看他分享的那些鄰居故事就更有意思了。像是他說有人移民去美國、有人後來當上證交所總經理、還有提到以前的老警察好像比較嚴肅，這些零零散散的片段就拼出一個社區的人文風景。</p>
 <p>這些故事雖然零散，可是很真實。比方說他提到隔壁鄰居對他們家想要在外牆加裝鐵架有意見，還找了管理員來協調。這種事很常發生，就反映了鄰居之間可能因為生活習慣或是對空間使用的看法不一樣，會產生一些小摩擦。</p>
 <p>另外他提到有些鄰居是警官學校或是警大畢業的，這個或許也暗示了社區內部就算都是公務體系，可能還是有不同的資歷或是階級背景存在。</p>
@@ -141,19 +223,19 @@
 <p>變遷的關鍵詞：「拆」</p>
 <p>那在這40年的居住期間，財哥觀察到最大的變化是什麼？他嘴裡一直出現那個「拆」字，這好像是個關鍵詞。</p>
 <p>沒錯，「拆」這個字幾乎是貫穿了整個變遷的敘事。而且這個「拆」不只是物理上的拆，它也象徵著一個舊世代的結束跟新的開始。</p>
-<p>訪談裡提到各種拆建，像是有人在外牆加蓋鐵皮、甚至發生被人家惡意破壞的衝突，還有像是有人房子蓋一半就停工了。然後樓高限制從以前很嚴格（比如說不能超過180公分——180公分這麼矮！），到後來慢慢放寬。</p>
+<div class="lead-box"><p><strong>訪談裡提到各種拆建，像是有人在外牆加蓋鐵皮、甚至發生被人家惡意破壞的衝突，還有像是有人房子蓋一半就停工了。然後樓高限制從以前很嚴格（比如說不能超過180公分——180公分這麼矮！），到後來慢慢放寬。</strong></p></div>
 <p>除了市場，還有一些老舊宿舍的拆除改建，這些都是一直在發生的變化，都反映了都市更新的壓力跟需求。</p>
 <p>地景的變化</p>
 <p>除了建築物本身，他還提到一些街道、地景的變化。路變大了！還有公園裡以前有龍眼樹，甚至有人在那邊放沖天炮。</p>
-<p>這些細節就讓那個歷史場景活過來了。他提到旁邊的瑠公圳——瑠公圳是一條對早期台北盆地灌溉很重要的水圳，雖然現在可能都加蓋了或改了。還有一些特定的巷弄，像97巷、11巷什麼的，一貫道的佛堂，還有到現在還在的老孫涼麵、大胖水果店。</p>
+<div class="lead-box"><p><strong>這些細節就讓那個歷史場景活過來了。他提到旁邊的瑠公圳——瑠公圳是一條對早期台北盆地灌溉很重要的水圳，雖然現在可能都加蓋了或改了。還有一些特定的巷弄，像97巷、11巷什麼的，一貫道的佛堂，還有到現在還在的老孫涼麵、大胖水果店。</strong></p></div>
 <p>這些地標有些還在、有些消失了，本身就在說故事。聽起來這些變化不只是地圖上的線條改一改，而是整個生活經驗的轉變。</p>
-<p>還有像是火災的記憶，他說那個海天公寓附近失火，因為巷子太窄，消防車進不去。那一定很驚險，這可能是早期社區普遍會有的問題——巷道太窄。這會影響到公共安全還有救災的效率。</p>
+<div class="lead-box"><p><strong>還有像是火災的記憶，他說那個海天公寓附近失火，因為巷子太窄，消防車進不去。那一定很驚險，這可能是早期社區普遍會有的問題——巷道太窄。這會影響到公共安全還有救災的效率。</strong></p></div>
 <p>這也連帶提到一些水利的問題，像是水溝要定期清、排水系統要改善等等。這些聽起來好像很瑣碎，但其實都是居民最關心的日常問題，也反映了基礎設施怎麼隨著社區發展一步一步提升。</p>
 <p>房價變遷的震撼</p>
 <p>從各個方面來看，這40年的變化真的很劇烈。回到住的部分，他們買房子的故事本身就很有代表性。剛剛提到是熟人介紹，而且那個房價的變化幅度聽起來非常驚人。</p>
-<p>這段確實是時代的縮影。從最早可能是透過單位補助或是用比較便宜的價格買到——他提到當時月薪可能不到1萬8，然後貸款40萬，自備款幾萬塊——這反映了早期公務員的薪水還有當時的房價水平。</p>
+<div class="lead-box"><p><strong>這段確實是時代的縮影。從最早可能是透過單位補助或是用比較便宜的價格買到——他提到當時月薪可能不到1萬8，然後貸款40萬，自備款幾萬塊——這反映了早期公務員的薪水還有當時的房價水平。</strong></p></div>
 <p>然後隨著台灣經濟起飛，房價就一路漲，漲到6、7百萬，甚至有人開價到900多萬。天哪，幾萬塊變900多萬！這不只是數字的變化，它更折射出社會經濟結構、房地產市場的巨大變遷，還有買房子的壓力是怎麼隨著時代演進的。</p>
-<p>他甚至還提到早期公務員相對是比較窮的，這跟我們現在對公務員那種「穩定收入、中上階層」的印象不太一樣。這就是歷史對照有趣的地方——不同年代公務人員這個身份對應的社經地位跟生活條件是會變的。</p>
+<div class="lead-box"><p><strong>他甚至還提到早期公務員相對是比較窮的，這跟我們現在對公務員那種「穩定收入、中上階層」的印象不太一樣。這就是歷史對照有趣的地方——不同年代公務人員這個身份對應的社經地位跟生活條件是會變的。</strong></p></div>
 <p>他也提到一些當時買房子的眉角，像是買法拍屋風險很高，他同事就勸他不要碰。還有為了爭取那個單位的房屋配售資格，家裡有小孩居然可以加分！真的假的？有小孩可以加分？聽起來很妙對不對？</p>
 <p>所以當時買房子不只是錢的問題，還跟你的身份資格、人際關係，甚至一些不成文的規定有關。他說他自己因為住得比較遠，沒有分配到宿舍，加上家裡有小孩，這些因素加起來反而可能增加了他拿到配售的機會。</p>
 <p>這就顯示了當時那個資源分配體系的一些運作邏輯，也反映了那種以家戶為單位的考量。</p>
@@ -165,17 +247,17 @@
 <p>，還有孩子們長大、成家立業的過程。這些聽起來很平凡的生活點滴，但其實就是一個家庭在這個社區落地深根、世代交替的證明。</p>
 <p>展望未來：都更的十字路口</p>
 <p>那麼回顧了這麼多過去跟現在，訪談的最後有沒有談到這個社區的未來展望呢？好像有提到都市更新的可能性。</p>
-<p>訪談的最後面聚焦在公辦都更和社會住宅這個議題上。看起來政府的主管機關——內政部國土營建署都市更新中心——有一個比較大的規劃，打算把財哥他們社區周邊，包含一些國有地在內，相當大一片區域做一個整體的開發。</p>
+<div class="lead-box"><p><strong>訪談的最後面聚焦在公辦都更和社會住宅這個議題上。看起來政府的主管機關——內政部國土營建署都市更新中心——有一個比較大的規劃，打算把財哥他們社區周邊，包含一些國有地在內，相當大一片區域做一個整體的開發。</strong></p></div>
 <p>目標是蓋社會住宅，還有規劃公園綠地。這個影響很深遠。不過聽起來財哥他們住的這棟樓會不會被直接納入這個都更計劃，好像還是個未知數。</p>
 <p>從訪談內容來判斷，他們這棟樓的住戶好像參與意願不是很高，或者說那個產權整合的難度比較大。所以被納入改建的可能性似乎不太大，訪談者也推測機會不高。</p>
-<p>這其實就點出了都市更新普遍會面臨的挑戰——你要怎麼去協調這麼多私有產權所有人的意願？怎麼整合各方的意見？這是一個非常複雜的過程。</p>
+<div class="lead-box"><p><strong>這其實就點出了都市更新普遍會面臨的挑戰——你要怎麼去協調這麼多私有產權所有人的意願？怎麼整合各方的意見？這是一個非常複雜的過程。</strong></p></div>
 <p>所以就算自己住的樓沒有要拆，周遭的環境在未來幾年也可能會有翻天覆地的變化。這對他們來說，又是另一種形式的變遷了。</p>
 <p>正是如此，就算建築物本身沒變，可是周圍的都市紋理、社區樣貌，甚至生活機能都可能因為這種大型開發案而改變。這對老住戶來說可能帶來新的方便，但也可能衝擊到原本的生活習慣，還有對社區的認同感。</p>
 <p>結語：時代的縮影</p>
-<p>回顧整段訪談，我們真的透過財哥的眼睛看到了一個社區數十年來的縮影——從最早那種以公務和警務人員為主、相對單純的聚落，經歷了建築的拆建、人口的流動、房價的劇烈起伏，到現在又站在都市更新計劃的十字路口上。</p>
+<div class="lead-box"><p><strong>回顧整段訪談，我們真的透過財哥的眼睛看到了一個社區數十年來的縮影——從最早那種以公務和警務人員為主、相對單純的聚落，經歷了建築的拆建、人口的流動、房價的劇烈起伏，到現在又站在都市更新計劃的十字路口上。</strong></p></div>
 <p>這份記錄讓我們很深刻地體會到一個社區的氣質，或者說它的個性，是怎麼被它的居民組成、歷史的機遇（像是早期的配售政策），還有地理位置（從偏僻到核心），這些因素共同塑造出來的。</p>
 <p>同時也看到個人的生活記憶跟那個宏觀的都市發展進程之間存在一種既緊密相依，但有時候又充滿張力的互動關係。</p>
-<p>而且，其實像財哥說的，鄰居之間不一定很熱絡，但那種共同的、相似的生命經驗好像也形成了一種隱性的連接——一種特殊的社群感。可能不需要常常往來，但彼此都大概理解對方是來自一個相似的世界。</p>
+<div class="lead-box"><p><strong>而且，其實像財哥說的，鄰居之間不一定很熱絡，但那種共同的、相似的生命經驗好像也形成了一種隱性的連接——一種特殊的社群感。可能不需要常常往來，但彼此都大概理解對方是來自一個相似的世界。</strong></p></div>
 <p>這份訪談確實提供了很豐富的層次，它不只是關於一個特定地點的故事而已，其實也映照出台灣社會數十年來的變遷軌跡。</p>
 <p>聽完財哥的故事，您是不是也開始回想自己生活或成長的那個角落？那裡有過哪些讓你印象深刻的人事物，又經歷了怎麼樣的變化呢？</p>
 <p>一個地方的靈魂究竟是藏在那些好像不會變的磚瓦上，還是流淌在居民們不斷述說、不斷傳承的記憶之中？</p>
@@ -190,23 +272,90 @@
 <p>Page updated</p>
 <p>Google Sites</p>
 <p>Report abuse</p>
-      <h2>本頁珍貴影像與檔案</h2>
-<div class="image-gallery">
-  <div class="gallery-item"><img src="images/image_169.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_170.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_171.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_172.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_173.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-</div>
+      
+      <section class="gallery-section">
+        <div class="gallery-heading">
+          <h2>本篇珍貴影像與田野檔案</h2>
+          <span class="gallery-count">共 5 張紀錄照片</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" onclick="openLightbox('images/image_169.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_169.jpg" alt="人物故事：財哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_170.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_170.jpg" alt="人物故事：財哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_171.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_171.jpg" alt="人物故事：財哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_172.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_172.jpg" alt="人物故事：財哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_173.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_173.jpg" alt="人物故事：財哥 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="sequence-nav" aria-label="篇章前後頁">
+  <a href="landscape-compare.html" class="sequence-card">
+    <span class="sequence-label">← 上一篇</span>
+    <span class="sequence-title">地景對比</span>
+  </a>
+  <a href="story-renai.html" class="sequence-card" style="text-align: right;">
+    <span class="sequence-label">下一篇 →</span>
+    <span class="sequence-title">仁愛里的仁愛人</span>
+  </a>
+</nav>
 
     </article>
   </main>
 
+  <!-- 圖片燈箱 Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+      <img src="" alt="放大預覽" class="lightbox-img" id="lightboxImg">
+    </div>
+  </div>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-copy">走進消失ing的警舍街角・新店七張警察眷舍與仁愛里田野紀錄</div>
+      <a href="#top" class="back-to-top">回到頁首 ↑</a>
+    </div>
+  </footer>
+
   <script>
-    function toggleMenu() {
-      var sidebar = document.getElementById('sidebar');
-      sidebar.classList.toggle('show');
+    function toggleDrawer() {
+      document.getElementById('drawerPanel').classList.toggle('active');
+      document.getElementById('drawerBackdrop').classList.toggle('active');
+    }
+
+    function openLightbox(src) {
+      var modal = document.getElementById('lightboxModal');
+      var img = document.getElementById('lightboxImg');
+      img.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightboxModal').classList.remove('active');
+      }
     }
   </script>
+
 </body>
 </html>

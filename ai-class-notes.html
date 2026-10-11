@@ -1,53 +1,135 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>13AI幫幫忙上課紀錄 - 走進消失ing的警舍街角</title>
+  <title>AI 幫幫忙上課紀錄 ｜ 走進消失ing的警舍街角</title>
+  <meta name="description" content="新店七張警察眷舍與仁愛里社區發展紀錄：AI 幫幫忙上課紀錄">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- 行動裝置頂部列 -->
-  <header class="mobile-header">
-    <div style="font-weight: bold; font-size: 1.1rem;">走進消失ing的警舍街角</div>
-    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+<body id="top">
+
+  <!-- 頂部主要導覽列 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a class="brand" href="index.html">
+        <span class="brand-title">走進消失ing的警舍街角</span>
+        <span class="brand-subtitle">新店七張警察眷舍與仁愛里紀錄</span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="nav-toggle-btn" onclick="toggleDrawer()" aria-label="開啟選單">
+          <span>篇章目錄</span>
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- 側邊導覽列 -->
-  <aside class="sidebar" id="sidebar">
-    <div class="site-brand">
-      <h1>走進消失ing<br>的警舍街角</h1>
-      <div class="subtitle">新店七張警察眷舍與仁愛里紀錄</div>
+  <!-- 篇章抽屜導覽 -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer()"></div>
+  <aside class="drawer-panel" id="drawerPanel">
+    <div class="drawer-header">
+      <div class="drawer-title">篇章目錄</div>
+      <button type="button" class="drawer-close" onclick="toggleDrawer()" aria-label="關閉選單">✕</button>
     </div>
-    <ul class="nav-menu">
-  <li class="nav-item"><a href="index.html" class="nav-link">首頁</a></li>
-  <li class="nav-item"><a href="walk-0302.html" class="nav-link">0302 社區走讀</a></li>
-  <li class="nav-item"><a href="old-photos.html" class="nav-link">老照片 vs. 現在</a></li>
-  <li class="nav-item"><a href="plants.html" class="nav-link">警舍周遭植物圖鑑</a></li>
-  <li class="nav-item"><a href="story-looking-up.html" class="nav-link">故事：仰望的日子</a></li>
-  <li class="nav-item"><a href="creative-works.html" class="nav-link">延伸創作</a></li>
-  <li class="nav-item"><a href="map-poster.html" class="nav-link">警舍地圖壁報＋發想</a></li>
-  <li class="nav-item"><a href="google-my-map.html" class="nav-link">Google My Map</a></li>
-  <li class="nav-item"><a href="landscape-compare.html" class="nav-link">地景對比</a></li>
-  <li class="nav-item"><a href="story-tsai.html" class="nav-link">故事：財哥</a></li>
-  <li class="nav-item"><a href="story-renai.html" class="nav-link">故事：仁愛里的仁愛人</a></li>
-  <li class="nav-item"><a href="story-kun.html" class="nav-link">故事：街訪坤哥</a></li>
-  <li class="nav-item"><a href="story-police-wife.html" class="nav-link">故事：警察的家後</a></li>
-  <li class="nav-item"><a href="ai-class-notes.html" class="nav-link active">AI幫幫忙上課紀錄</a></li>
-  <li class="nav-item"><a href="conan-ai-story.html" class="nav-link">柯南教你用AI寫故事</a></li>
-  <li class="nav-item"><a href="line-to-story.html" class="nav-link">從Line對話到故事</a></li>
+    <nav class="drawer-content">
+      <div class="nav-group-title">全景導讀與歷史</div>
+<ul class="drawer-menu">
+  <li><a href="index.html" class="drawer-link"><span class="nav-num">›</span><span>01 首頁・走進警舍街角</span></a></li>
+  <li><a href="walk-0302.html" class="drawer-link"><span class="nav-num">›</span><span>02 社區走讀</span></a></li>
+  <li><a href="old-photos.html" class="drawer-link"><span class="nav-num">›</span><span>03 老照片對比</span></a></li>
+  <li><a href="plants.html" class="drawer-link"><span class="nav-num">›</span><span>04 植物圖鑑</span></a></li>
 </ul>
+<div class="nav-group-title">地景與田野發想</div>
+<ul class="drawer-menu">
+  <li><a href="story-looking-up.html" class="drawer-link"><span class="nav-num">›</span><span>05 仰望的日子</span></a></li>
+  <li><a href="creative-works.html" class="drawer-link"><span class="nav-num">›</span><span>06 延伸創作</span></a></li>
+  <li><a href="map-poster.html" class="drawer-link"><span class="nav-num">›</span><span>07 地圖壁報發想</span></a></li>
+  <li><a href="google-my-map.html" class="drawer-link"><span class="nav-num">›</span><span>08 Google My Map</span></a></li>
+  <li><a href="landscape-compare.html" class="drawer-link"><span class="nav-num">›</span><span>09 地景對比</span></a></li>
+</ul>
+<div class="nav-group-title">人物訪談與街訪故事</div>
+<ul class="drawer-menu">
+  <li><a href="story-tsai.html" class="drawer-link"><span class="nav-num">›</span><span>10 故事・財哥</span></a></li>
+  <li><a href="story-renai.html" class="drawer-link"><span class="nav-num">›</span><span>11 仁愛里的仁愛人</span></a></li>
+  <li><a href="story-kun.html" class="drawer-link"><span class="nav-num">›</span><span>12 街訪坤哥</span></a></li>
+  <li><a href="story-police-wife.html" class="drawer-link"><span class="nav-num">›</span><span>13 警察的家後</span></a></li>
+</ul>
+<div class="nav-group-title">AI共創與學習紀錄</div>
+<ul class="drawer-menu">
+  <li><a href="ai-class-notes.html" class="drawer-link current"><span class="nav-num">›</span><span>14 AI上課紀錄</span></a></li>
+  <li><a href="conan-ai-story.html" class="drawer-link"><span class="nav-num">›</span><span>15 柯南教AI寫故事</span></a></li>
+  <li><a href="line-to-story.html" class="drawer-link"><span class="nav-num">›</span><span>16 從對話到故事</span></a></li>
+</ul>
+
+    </nav>
   </aside>
 
   <!-- 主要內容區 -->
-  <main class="main-wrapper">
-    <header class="page-header">
-      <h1 class="page-title">13AI幫幫忙上課紀錄</h1>
-    </header>
-    <article class="article-content">
-      <p>AI幫幫忙</p>
-<p>上課紀錄</p>
-<p>🎯 AI 工具寫故事：上課</p>
+  <main class="main-container">
+    <article class="article-hero">
+      <span class="hero-kicker">數位共創</span>
+      <h1 class="article-title">AI 幫幫忙上課紀錄</h1>
+      <div class="article-meta">
+        <span>分類：AI共創與學習紀錄</span>
+        <span>•</span>
+        <span>田野記錄整理：Abby</span>
+      </div>
+    </article>
+
+    <article class="article-body">
+      <h3>13AI幫幫忙上課紀錄</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>1 首頁走進消失ing的警舍街角</p>
+<p>0302社區走讀</p>
+<p>2老照片 vs. 現在</p>
+<h3>3警舍周遭植物圖鑑</h3>
+<h3>4故事仰望的日子</h3>
+<p>5延伸創作</p>
+<p>6警舍地圖*壁報+發想</p>
+<p>7Google My Map</p>
+<p>8地景對比</p>
+<h3>9故事財哥</h3>
+<h3>10故事仁愛里的仁愛人</h3>
+<h3>11故事街訪坤哥</h3>
+<h3>12故事警察的家後</h3>
+<h3>13AI幫幫忙上課紀錄</h3>
+<h3>14柯南教你用AI寫故事</h3>
+<h3>15從Line對話到故事</h3>
+<p>AI幫幫忙</p>
+<h3>上課紀錄</h3>
+<h3>🎯 AI 工具寫故事：上課</h3>
 <p>口說內容記錄</p>
 <p>AI最會文字接龍?</p>
 <p>1️⃣</p>
@@ -71,23 +153,23 @@
 <p>再學進階 ( 網上或youtube 可看教學)</p>
 <p>手機板</p>
 <p>電腦版</p>
-<p>就開始輸入你要的摘要或故事開始</p>
+<h3>就開始輸入你要的摘要或故事開始</h3>
 <p>5️⃣</p>
 <p>調整潤飾</p>
 <p>人工檢查邏輯、事實、語氣</p>
-<p>校對文字，讓故事更流暢</p>
+<h3>校對文字，讓故事更流暢</h3>
 <p>學會的技能</p>
 <p>錄音 → 文字 → AI 生成 → 編修</p>
 <p>不同 AI 各有特色，可以互補</p>
 <p>應用</p>
-<p>生活日記、品牌故事、教學案例、社群內容</p>
+<h3>生活日記、品牌故事、教學案例、社群內容</h3>
 <h3>👉 簡單說：</h3>
 <p>錄音，轉文字，放進 AI，選風格，修好就完成故事！</p>
 <p>「錄音 → 轉文字 → AI → 編修 → 完成故事」</p>
 <p>各 AI 工具的特色比較</p>
 <p>（Gemini、ChatGPT、Claude）</p>
-<p>參考故事6</p>
-<p>建立故事機器人GEM</p>
+<h3>參考故事6</h3>
+<h3>建立故事機器人GEM</h3>
 <p>(提示詞如下)適用每個AI</p>
 <p>角色定位</p>
 <p>你是一位名為「故事機器」的創作代理人，專長是生成情感豐富、結構完整、畫面感強烈的故事。</p>
@@ -106,22 +188,22 @@
 <p>4. **黃金圓 (Golden Circle)**：由「為什麼 → 怎麼做 → 做了什麼」引導故事核心。</p>
 <p>5. **品牌的七個拼圖**：包括角色、問題、指引、計畫、行動、結果、轉變等元素。</p>
 <p>6. 可靈活混搭上述結構，根據使用者需求與題材選擇最適合的敘事方式。</p>
-<p>[社區故事的核心目標]</p>
+<h3>[社區故事的核心目標]</h3>
 <p>- 挖掘社區特色，找出亮點。</p>
 <p>- 觀察社區現象，發展主題。</p>
 <p>- 發現社區問題，引發思考。</p>
 <p>- 看見社區改變，呈現現象或問題。</p>
-<p>- 文字需清晰明確，背景能賦予故事意義。</p>
+<h3>- 文字需清晰明確，背景能賦予故事意義。</h3>
 <p>- 內容需有知識含金量，並能與閱聽人產生共鳴與關聯。</p>
 <p>[輸出規則]</p>
-<p>- 標題：10–15字內，抓住故事核心意象。</p>
-<p>- 每段故事分明，段落之間留空行。</p>
+<h3>- 標題：10–15字內，抓住故事核心意象。</h3>
+<h3>- 每段故事分明，段落之間留空行。</h3>
 <p>- 角色對話格式：「角色名：台詞」。</p>
 <p>- 場景描寫細膩，讓讀者有畫面感。</p>
 <p>- 若使用者指定字數或每行字數（例如每行10字並以逗號結尾），必須嚴格遵守。</p>
 <p>- 可提供多版本選擇，使用編號清楚標示。</p>
 <p>[互動流程]</p>
-<p>1. 在開始寫故事前，重述你理解的需求。</p>
+<h3>1. 在開始寫故事前，重述你理解的需求。</h3>
 <p>2. 若設定不足，主動詢問缺少的要素（主角、場景、衝突、結局傾向、故事長度）。</p>
 <p>3. 使用者要求續寫時，保持情節連貫與前文一致。</p>
 <p>4. 避免重複用詞與冗長敘述，保持閱讀節奏流暢。</p>
@@ -133,9 +215,9 @@
 <p>- 童話：角色單純可愛，寓言意味濃厚。</p>
 <p>- 詩意：用意象化的語言描寫情感與場景。</p>
 <p>AI寫作指令完全教學指南</p>
-<p>從零開始學會與AI協作創作故事</p>
+<h3>從零開始學會與AI協作創作故事</h3>
 <p>📖 前言：AI寫作的無限可能</p>
-<p>現在的AI已經不只是工具，更像是你的創作夥伴。無論你想寫散步地圖、回憶錄、人物故事，還是商業文案，只要學會正確的指令技巧，AI都能幫你創造出令人驚豔的作品。</p>
+<div class="lead-box"><p><strong>現在的AI已經不只是工具，更像是你的創作夥伴。無論你想寫散步地圖、回憶錄、人物故事，還是商業文案，只要學會正確的指令技巧，AI都能幫你創造出令人驚豔的作品。</strong></p></div>
 <p>這份指南將帶你從基礎入門到進階應用，讓你完全掌握AI寫作的精髓。</p>
 <p>🎯 第一章：基本指令結構</p>
 <p>黃金公式：角色+素材+風格+要求</p>
@@ -146,7 +228,7 @@
 <p>【具體要求】寫成3000字的溫暖散文</p>
 <p>**或直接對著chatgpt 把你的想法講出來</p>
 <p>實戰範例</p>
-<h3>散步地圖故事：</h3>
+<div class="lead-box"><p><strong>散步地圖故事：</strong></p></div>
 <p>請以詹宏志的筆法，將我提供的17個景點寫成一篇3000字的散步回憶錄。</p>
 <p>每個景點都要有具體的生活細節和情感連結。</p>
 <p>語調要溫暖、有畫面感，像在和老朋友聊天。</p>
@@ -162,7 +244,7 @@
 <p>🎨 第二章：40種AI寫作指令大全</p>
 <p>🖋️ 指定作家風格類（1-5）</p>
 <p>請用余光中的筆法重新詮釋這些素材</p>
-<p>以吳淡如的文風來書寫這個故事</p>
+<h3>以吳淡如的文風來書寫這個故事</h3>
 <p>用張愛玲的敘述方式改寫成散文</p>
 <p>請模仿陳文茜的筆觸來創作</p>
 <p>以朱自清的風格寫成回憶文章</p>
@@ -171,7 +253,7 @@
 <p>📚 文體類型類（6-10）</p>
 <p>請將這些素材寫成一篇報導文學</p>
 <p>改寫成詩意散文，要有畫面感</p>
-<p>用小說的手法來敘述這個故事</p>
+<h3>用小說的手法來敘述這個故事</h3>
 <p>寫成遊記形式，帶入個人情感</p>
 <p>請寫成一篇感人的回憶錄</p>
 <p>💭 情感語調類（11-15）</p>
@@ -188,7 +270,7 @@
 <p>用對話穿插的方式來增加生動性</p>
 <p>👁️ 人稱視角類（21-25）</p>
 <p>請以第一人稱的角度來回憶這段經歷</p>
-<p>用第三人稱全知視角來敘述這個故事</p>
+<h3>用第三人稱全知視角來敘述這個故事</h3>
 <p>以對話體的方式呈現，像在和朋友聊天</p>
 <p>用書信體的形式寫給未來的自己</p>
 <p>以旁觀者的角度來描述這些場景</p>
@@ -201,7 +283,7 @@
 <h3>進階技巧：</h3>
 <p>可以說「請列出鄭愁予《錯誤》的核心特色，然後用這些特色來創作我的故事」</p>
 <p>💼 文案行銷類（31-35）</p>
-<p>寫成吸睛的開頭+故事+行動呼籲的文案結構</p>
+<h3>寫成吸睛的開頭+故事+行動呼籲的文案結構</h3>
 <p>用SCQA架構：情境→衝突→問題→答案</p>
 <p>開頭要有懸念或(吸睛)，結尾要有強烈的CTA</p>
 <p>寫成社群媒體的限時動態文案風格(如FB.IG)</p>
@@ -216,21 +298,21 @@
 <p>🎯 調整優化技巧</p>
 <h3>當AI產出的內容不滿意時，不要重新開始，而是精準調整：</h3>
 <p>「這篇太文雅了，請改用更接地氣的語言」</p>
-<p>「節奏太慢，請加快敘述節奏讓故事更緊湊」</p>
+<h3>「節奏太慢，請加快敘述節奏讓故事更緊湊」</h3>
 <p>「情感不夠強烈，請加深情感濃度」</p>
 <p>「太抽象了，請加入更多具體的生活細節」</p>
 <p>「請把這段改得更有畫面感和臨場感」</p>
 <p>📏 長度結構控制</p>
 <p>「請壓縮成500字的精簡版本」</p>
-<p>「擴寫成5000字的完整故事」</p>
+<h3>「擴寫成5000字的完整故事」</h3>
 <p>「分成上下兩集，這是上集要留懸念」</p>
 <p>「寫成17個短篇，每篇200字左右」</p>
 <p>「請只寫開頭300字，要讓人想繼續讀下去」</p>
 <p>🚀 第四章：高級應用策略</p>
 <p>🔄 連續調整法</p>
-<p>第一輪：「請用余光中筆法寫散步故事」</p>
+<h3>第一輪：「請用余光中筆法寫散步故事」</h3>
 <p>第二輪：「太文雅了，請用更親民的語調」</p>
-<p>第三輪：「請加入更多對話讓故事生動」</p>
+<h3>第三輪：「請加入更多對話讓故事生動」</h3>
 <p>第四輪：「結尾請加強CTA，引導實際行動」</p>
 <p>**</p>
 <p>CTA 的全名是 Call to Action（行動呼籲）。 它是一種行銷術語</p>
@@ -241,7 +323,7 @@
 <p>S， 即情境（situation）； C， 即衝突（complication）； Q，即問題（question）； A，即答案（answer）</p>
 <p>🎪 情境設定法</p>
 <p>「假設你是一個在地老居民，要向外地朋友介紹家鄉，</p>
-<p>用說故事的方式，讓他們產生想來走走的衝動」</p>
+<h3>用說故事的方式，讓他們產生想來走走的衝動」</h3>
 <p>🏆 測試比較法</p>
 <h3>「請同時產出三個版本：</h3>
 <p>版本A：文青風格</p>
@@ -253,7 +335,7 @@
 <p>「請把第3段的那個細節再展開描寫」</p>
 <p>「這個比喻很棒，請多加幾個類似的比喻」</p>
 <p>💯 第五章：實戰案例分析</p>
-<h3>案例一：散步地圖文案</h3>
+<div class="lead-box"><p><strong>案例一：散步地圖文案</strong></p></div>
 <h3>初始指令：</h3>
 <p>請用詹宏志的筆法，寫一篇關於新店仁愛里老巷弄的散步文章</p>
 <h3>優化後指令：</h3>
@@ -262,13 +344,13 @@
 <p>開頭要有懸念吸引讀者，每個景點都要有具體的生活細節，</p>
 <p>結尾要用SCQA結構引導讀者實際參與散步行程。</p>
 <p>素材：附盤點6座橋景點的詳細資料...</p>
-<p>案例二：人物故事</p>
+<h3>案例二：人物故事</h3>
 <h3>初始指令：</h3>
-<p>請寫王大哥的故事</p>
+<h3>請寫王大哥的故事</h3>
 <h3>優化後指令：</h3>
 <p>請以報導文學的手法，帶著深深的敬佩之情，</p>
 <p>用對話穿插的方式來增加生動性，</p>
-<p>寫一篇2000字的王大哥生命故事。</p>
+<h3>寫一篇2000字的王大哥生命故事。</h3>
 <p>重點突出他的堅韌精神和人生智慧，</p>
 <p>語調要溫暖但不煽情，真實但有感染力。</p>
 <p>素材：[完整錄音稿內容]</p>
@@ -296,7 +378,7 @@
 <p>不要害怕試錯</p>
 <p>- AI最大的優勢就是可以無限次重來</p>
 <p>素材是王道</p>
-<p>- 豐富的個人素材是好故事的基礎</p>
+<h3>- 豐富的個人素材是好故事的基礎</h3>
 <p>持續優化</p>
 <p>- 每次對話都是讓作品更完美的機會</p>
 <p>現在就開始你的AI寫作之旅吧！把那些珍貴的回憶、獨特的經歷，通過AI的幫助，變成動人的故事。</p>
@@ -306,50 +388,225 @@
 <p>Page updated</p>
 <p>Google Sites</p>
 <p>Report abuse</p>
-      <h2>本頁珍貴影像與檔案</h2>
-<div class="image-gallery">
-  <div class="gallery-item"><img src="images/image_212.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_213.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_214.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_215.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_216.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_217.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_218.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_219.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_220.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_221.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_222.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_223.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_224.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_225.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_226.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_227.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_228.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_229.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_230.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_231.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_232.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_233.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_234.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_235.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_236.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_237.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_238.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_239.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_240.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_241.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_242.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-  <div class="gallery-item"><img src="images/image_243.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
-</div>
+      
+      <section class="gallery-section">
+        <div class="gallery-heading">
+          <h2>本篇珍貴影像與田野檔案</h2>
+          <span class="gallery-count">共 32 張紀錄照片</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" onclick="openLightbox('images/image_212.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_212.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_213.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_213.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_214.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_214.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_215.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_215.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_216.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_216.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_217.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_217.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_218.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_218.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_219.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_219.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_220.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_220.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_221.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_221.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_222.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_222.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_223.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_223.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_224.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_224.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_225.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_225.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_226.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_226.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_227.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_227.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_228.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_228.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_229.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_229.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_230.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_230.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_231.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_231.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_232.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_232.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_233.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_233.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_234.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_234.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_235.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_235.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_236.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_236.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_237.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_237.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_238.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_238.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_239.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_239.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_240.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_240.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_241.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_241.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_242.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_242.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+          <div class="photo-card" onclick="openLightbox('images/image_243.jpg')">
+            <div class="photo-thumb-wrap">
+              <img src="images/image_243.jpg" alt="AI 幫幫忙上課紀錄 紀錄照片" class="photo-thumb" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="sequence-nav" aria-label="篇章前後頁">
+  <a href="story-police-wife.html" class="sequence-card">
+    <span class="sequence-label">← 上一篇</span>
+    <span class="sequence-title">警察的家後</span>
+  </a>
+  <a href="conan-ai-story.html" class="sequence-card" style="text-align: right;">
+    <span class="sequence-label">下一篇 →</span>
+    <span class="sequence-title">柯南教你用 AI 寫故事</span>
+  </a>
+</nav>
 
     </article>
   </main>
 
+  <!-- 圖片燈箱 Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+      <img src="" alt="放大預覽" class="lightbox-img" id="lightboxImg">
+    </div>
+  </div>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-copy">走進消失ing的警舍街角・新店七張警察眷舍與仁愛里田野紀錄</div>
+      <a href="#top" class="back-to-top">回到頁首 ↑</a>
+    </div>
+  </footer>
+
   <script>
-    function toggleMenu() {
-      var sidebar = document.getElementById('sidebar');
-      sidebar.classList.toggle('show');
+    function toggleDrawer() {
+      document.getElementById('drawerPanel').classList.toggle('active');
+      document.getElementById('drawerBackdrop').classList.toggle('active');
+    }
+
+    function openLightbox(src) {
+      var modal = document.getElementById('lightboxModal');
+      var img = document.getElementById('lightboxImg');
+      img.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightboxModal').classList.remove('active');
+      }
     }
   </script>
+
 </body>
 </html>
