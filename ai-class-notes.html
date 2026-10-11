@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13AI幫幫忙上課紀錄 - 走進消失ing的警舍街角</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 行動裝置頂部列 -->
+  <header class="mobile-header">
+    <div style="font-weight: bold; font-size: 1.1rem;">走進消失ing的警舍街角</div>
+    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <!-- 側邊導覽列 -->
+  <aside class="sidebar" id="sidebar">
+    <div class="site-brand">
+      <h1>走進消失ing<br>的警舍街角</h1>
+      <div class="subtitle">新店七張警察眷舍與仁愛里紀錄</div>
+    </div>
+    <ul class="nav-menu">
+  <li class="nav-item"><a href="index.html" class="nav-link">首頁</a></li>
+  <li class="nav-item"><a href="walk-0302.html" class="nav-link">0302 社區走讀</a></li>
+  <li class="nav-item"><a href="old-photos.html" class="nav-link">老照片 vs. 現在</a></li>
+  <li class="nav-item"><a href="plants.html" class="nav-link">警舍周遭植物圖鑑</a></li>
+  <li class="nav-item"><a href="story-looking-up.html" class="nav-link">故事：仰望的日子</a></li>
+  <li class="nav-item"><a href="creative-works.html" class="nav-link">延伸創作</a></li>
+  <li class="nav-item"><a href="map-poster.html" class="nav-link">警舍地圖壁報＋發想</a></li>
+  <li class="nav-item"><a href="google-my-map.html" class="nav-link">Google My Map</a></li>
+  <li class="nav-item"><a href="landscape-compare.html" class="nav-link">地景對比</a></li>
+  <li class="nav-item"><a href="story-tsai.html" class="nav-link">故事：財哥</a></li>
+  <li class="nav-item"><a href="story-renai.html" class="nav-link">故事：仁愛里的仁愛人</a></li>
+  <li class="nav-item"><a href="story-kun.html" class="nav-link">故事：街訪坤哥</a></li>
+  <li class="nav-item"><a href="story-police-wife.html" class="nav-link">故事：警察的家後</a></li>
+  <li class="nav-item"><a href="ai-class-notes.html" class="nav-link active">AI幫幫忙上課紀錄</a></li>
+  <li class="nav-item"><a href="conan-ai-story.html" class="nav-link">柯南教你用AI寫故事</a></li>
+  <li class="nav-item"><a href="line-to-story.html" class="nav-link">從Line對話到故事</a></li>
+</ul>
+  </aside>
+
+  <!-- 主要內容區 -->
+  <main class="main-wrapper">
+    <header class="page-header">
+      <h1 class="page-title">13AI幫幫忙上課紀錄</h1>
+    </header>
+    <article class="article-content">
+      <p>AI幫幫忙</p>
+<p>上課紀錄</p>
+<p>🎯 AI 工具寫故事：上課</p>
+<p>口說內容記錄</p>
+<p>AI最會文字接龍?</p>
+<p>1️⃣</p>
+<p>錄音</p>
+<p>2️⃣</p>
+<p>轉文字</p>
+<p>用IPHONE 內建語音備忘錄</p>
+<p>1️⃣</p>
+<p>錄音</p>
+<p>2️⃣</p>
+<p>轉文字</p>
+<p>iPhone 備忘錄 App(如下步驟)</p>
+<p>6查看文字稿</p>
+<p>8拷貝逐字稿</p>
+<p>3️⃣</p>
+<p>匯入 NotebookLM</p>
+<p>建立專案，把文字稿貼進去</p>
+<p>**</p>
+<p>系統會幫你整理成知識庫</p>
+<p>先學基本功能</p>
+<p>再學進階 ( 網上或youtube 可看教學)</p>
+<p>手機板</p>
+<p>電腦版</p>
+<p>就開始輸入你要的摘要或故事開始</p>
+<p>5️⃣</p>
+<p>調整潤飾</p>
+<p>人工檢查邏輯、事實、語氣</p>
+<p>校對文字，讓故事更流暢</p>
+<p>學會的技能</p>
+<p>錄音 → 文字 → AI 生成 → 編修</p>
+<p>不同 AI 各有特色，可以互補</p>
+<p>應用</p>
+<p>生活日記、品牌故事、教學案例、社群內容</p>
+<h3>👉 簡單說：</h3>
+<p>錄音，轉文字，放進 AI，選風格，修好就完成故事！</p>
+<p>「錄音 → 轉文字 → AI → 編修 → 完成故事」</p>
+<p>各 AI 工具的特色比較</p>
+<p>（Gemini、ChatGPT、Claude）</p>
+<p>參考故事6</p>
+<p>建立故事機器人GEM</p>
+<p>(提示詞如下)適用每個AI</p>
+<p>角色定位</p>
+<p>你是一位名為「故事機器」的創作代理人，專長是生成情感豐富、結構完整、畫面感強烈的故事。</p>
+<p>你精通各種文學風格，包括童話、懸疑、科幻、詩意與溫馨故事，並能靈活轉換。</p>
+<p>你能在對話中持續維護故事世界觀，保持語氣與風格一致。</p>
+<p>[任務範圍]</p>
+<p>1. 根據使用者提供的主題、角色、場景與情節，創作短篇或長篇故事。</p>
+<p>2. 具備概要擴寫功能，可將簡單的故事骨架延伸為完整敘事作品。</p>
+<p>3. 支援分章節、分段落創作，每章節有清楚的開頭、中段、高潮與結尾。</p>
+<p>4. 能在對話中接續前文，保持角色性格、故事背景與事件邏輯一致。</p>
+<p>5. 可結合多種敘事結構與故事方法論，增加故事層次與吸引力。</p>
+<p>[敘事結構 (Narrative Structures)]</p>
+<p>1. **起、承、轉、合**：經典四段式結構，適合短篇或單一事件。</p>
+<p>2. **英雄之旅**：包含「啟程 → 啟蒙 → 歸返」三階段，描寫角色轉變與成長。</p>
+<p>3. **S型人生**：展現人生的波峰波谷與成長曲線。</p>
+<p>4. **黃金圓 (Golden Circle)**：由「為什麼 → 怎麼做 → 做了什麼」引導故事核心。</p>
+<p>5. **品牌的七個拼圖**：包括角色、問題、指引、計畫、行動、結果、轉變等元素。</p>
+<p>6. 可靈活混搭上述結構，根據使用者需求與題材選擇最適合的敘事方式。</p>
+<p>[社區故事的核心目標]</p>
+<p>- 挖掘社區特色，找出亮點。</p>
+<p>- 觀察社區現象，發展主題。</p>
+<p>- 發現社區問題，引發思考。</p>
+<p>- 看見社區改變，呈現現象或問題。</p>
+<p>- 文字需清晰明確，背景能賦予故事意義。</p>
+<p>- 內容需有知識含金量，並能與閱聽人產生共鳴與關聯。</p>
+<p>[輸出規則]</p>
+<p>- 標題：10–15字內，抓住故事核心意象。</p>
+<p>- 每段故事分明，段落之間留空行。</p>
+<p>- 角色對話格式：「角色名：台詞」。</p>
+<p>- 場景描寫細膩，讓讀者有畫面感。</p>
+<p>- 若使用者指定字數或每行字數（例如每行10字並以逗號結尾），必須嚴格遵守。</p>
+<p>- 可提供多版本選擇，使用編號清楚標示。</p>
+<p>[互動流程]</p>
+<p>1. 在開始寫故事前，重述你理解的需求。</p>
+<p>2. 若設定不足，主動詢問缺少的要素（主角、場景、衝突、結局傾向、故事長度）。</p>
+<p>3. 使用者要求續寫時，保持情節連貫與前文一致。</p>
+<p>4. 避免重複用詞與冗長敘述，保持閱讀節奏流暢。</p>
+<p>5. 若使用者未指定風格，預設為溫馨細膩的敘事。</p>
+<p>[風格模式範例]</p>
+<p>- 溫馨：細膩描寫人物情感與日常氛圍。</p>
+<p>- 懸疑：營造懸念、鋪設伏筆、出現反轉。</p>
+<p>- 科幻：創造完整世界觀，加入科技細節與未來元素。</p>
+<p>- 童話：角色單純可愛，寓言意味濃厚。</p>
+<p>- 詩意：用意象化的語言描寫情感與場景。</p>
+<p>AI寫作指令完全教學指南</p>
+<p>從零開始學會與AI協作創作故事</p>
+<p>📖 前言：AI寫作的無限可能</p>
+<p>現在的AI已經不只是工具，更像是你的創作夥伴。無論你想寫散步地圖、回憶錄、人物故事，還是商業文案，只要學會正確的指令技巧，AI都能幫你創造出令人驚豔的作品。</p>
+<p>這份指南將帶你從基礎入門到進階應用，讓你完全掌握AI寫作的精髓。</p>
+<p>🎯 第一章：基本指令結構</p>
+<p>黃金公式：角色+素材+風格+要求</p>
+<h3>每個有效的AI寫作指令都應該包含這四個要素：</h3>
+<p>【角色定位】請你扮演一位經驗豐富的作家</p>
+<p>【提供素材】以下是我的17個景點資料...</p>
+<p>【指定風格】用詹宏志的筆法</p>
+<p>【具體要求】寫成3000字的溫暖散文</p>
+<p>**或直接對著chatgpt 把你的想法講出來</p>
+<p>實戰範例</p>
+<h3>散步地圖故事：</h3>
+<p>請以詹宏志的筆法，將我提供的17個景點寫成一篇3000字的散步回憶錄。</p>
+<p>每個景點都要有具體的生活細節和情感連結。</p>
+<p>語調要溫暖、有畫面感，像在和老朋友聊天。</p>
+<h3>素材：</h3>
+<p>景點1：巷口的雜貨店 - 小時候買糖果的地方</p>
+<p>景點2：公園的老樹 - 和朋友約會的回憶</p>
+<p>景點3：...</p>
+<h3>人物故事：</h3>
+<p>請幫我寫一篇關於王大哥的生命故事，以敬佩的角度來書寫。</p>
+<p>風格要像報導文學，但帶有溫度和情感。</p>
+<p>素材：[錄音稿內容]</p>
+<p>重點：突出他的堅韌精神和人生智慧</p>
+<p>🎨 第二章：40種AI寫作指令大全</p>
+<p>🖋️ 指定作家風格類（1-5）</p>
+<p>請用余光中的筆法重新詮釋這些素材</p>
+<p>以吳淡如的文風來書寫這個故事</p>
+<p>用張愛玲的敘述方式改寫成散文</p>
+<p>請模仿陳文茜的筆觸來創作</p>
+<p>以朱自清的風格寫成回憶文章</p>
+<h3>小技巧：</h3>
+<p>如果不熟悉某位作家的風格，可以先問AI：「請簡述余光中的寫作特色」</p>
+<p>📚 文體類型類（6-10）</p>
+<p>請將這些素材寫成一篇報導文學</p>
+<p>改寫成詩意散文，要有畫面感</p>
+<p>用小說的手法來敘述這個故事</p>
+<p>寫成遊記形式，帶入個人情感</p>
+<p>請寫成一篇感人的回憶錄</p>
+<p>💭 情感語調類（11-15）</p>
+<p>用懷舊溫暖的語調來書寫</p>
+<p>請以感恩的角度重新詮釋</p>
+<p>用幽默輕鬆的方式來描述</p>
+<p>帶著敬佩之情來書寫這個人物</p>
+<p>用充滿希望的語調來創作</p>
+<p>🏗️ 結構要求類（16-20）</p>
+<p>請寫成3000字的長篇散文</p>
+<p>分成17個段落，每段對應一個景點</p>
+<h3>用時間軸的方式來串聯故事</h3>
+<p>請加入賞析段落讓讀者更好理解</p>
+<p>用對話穿插的方式來增加生動性</p>
+<p>👁️ 人稱視角類（21-25）</p>
+<p>請以第一人稱的角度來回憶這段經歷</p>
+<p>用第三人稱全知視角來敘述這個故事</p>
+<p>以對話體的方式呈現，像在和朋友聊天</p>
+<p>用書信體的形式寫給未來的自己</p>
+<p>以旁觀者的角度來描述這些場景</p>
+<p>🎭 仿作特定作品類（26-30）</p>
+<p>請仿鄭愁予《錯誤》的意境和結構來創作</p>
+<p>模仿余光中《鄉愁》的排比手法</p>
+<p>仿朱自清《背影》的細膩描寫方式</p>
+<p>學習席慕蓉《一棵開花的樹》的抒情筆法</p>
+<p>參考林語堂《生活的藝術》的哲理散文風格</p>
+<h3>進階技巧：</h3>
+<p>可以說「請列出鄭愁予《錯誤》的核心特色，然後用這些特色來創作我的故事」</p>
+<p>💼 文案行銷類（31-35）</p>
+<p>寫成吸睛的開頭+故事+行動呼籲的文案結構</p>
+<p>用SCQA架構：情境→衝突→問題→答案</p>
+<p>開頭要有懸念或(吸睛)，結尾要有強烈的CTA</p>
+<p>寫成社群媒體的限時動態文案風格(如FB.IG)</p>
+<p>用說服力文案的方式，引導讀者參與散步行程</p>
+<p>💝 情感共鳴類（36-40）</p>
+<p>用母親寫給孩子的溫柔語調</p>
+<p>以老友重逢時的激動心情來書寫</p>
+<p>帶著初戀般的青澀回憶來描述</p>
+<p>用歷經滄桑後的智慧口吻來敘述</p>
+<p>以感恩惜福的心境來重新詮釋</p>
+<p>🔧 第三章：進階使用技巧</p>
+<p>🎯 調整優化技巧</p>
+<h3>當AI產出的內容不滿意時，不要重新開始，而是精準調整：</h3>
+<p>「這篇太文雅了，請改用更接地氣的語言」</p>
+<p>「節奏太慢，請加快敘述節奏讓故事更緊湊」</p>
+<p>「情感不夠強烈，請加深情感濃度」</p>
+<p>「太抽象了，請加入更多具體的生活細節」</p>
+<p>「請把這段改得更有畫面感和臨場感」</p>
+<p>📏 長度結構控制</p>
+<p>「請壓縮成500字的精簡版本」</p>
+<p>「擴寫成5000字的完整故事」</p>
+<p>「分成上下兩集，這是上集要留懸念」</p>
+<p>「寫成17個短篇，每篇200字左右」</p>
+<p>「請只寫開頭300字，要讓人想繼續讀下去」</p>
+<p>🚀 第四章：高級應用策略</p>
+<p>🔄 連續調整法</p>
+<p>第一輪：「請用余光中筆法寫散步故事」</p>
+<p>第二輪：「太文雅了，請用更親民的語調」</p>
+<p>第三輪：「請加入更多對話讓故事生動」</p>
+<p>第四輪：「結尾請加強CTA，引導實際行動」</p>
+<p>**</p>
+<p>CTA 的全名是 Call to Action（行動呼籲）。 它是一種行銷術語</p>
+<p>🎨 風格混搭法</p>
+<p>「請結合鄭愁予的詩意 + 龍應台的犀利 + 第一人稱敘述 + SCQA結構，</p>
+<p>寫成一篇既有文學性又有說服力的散步邀請文案」</p>
+<p>**</p>
+<p>S， 即情境（situation）； C， 即衝突（complication）； Q，即問題（question）； A，即答案（answer）</p>
+<p>🎪 情境設定法</p>
+<p>「假設你是一個在地老居民，要向外地朋友介紹家鄉，</p>
+<p>用說故事的方式，讓他們產生想來走走的衝動」</p>
+<p>🏆 測試比較法</p>
+<h3>「請同時產出三個版本：</h3>
+<p>版本A：文青風格</p>
+<p>版本B：親民風格</p>
+<p>版本C：文案風格</p>
+<p>讓我比較哪個效果最好」</p>
+<p>🔍 持續深化法</p>
+<p>「這個角度很好，請深入挖掘這個情感點」</p>
+<p>「請把第3段的那個細節再展開描寫」</p>
+<p>「這個比喻很棒，請多加幾個類似的比喻」</p>
+<p>💯 第五章：實戰案例分析</p>
+<h3>案例一：散步地圖文案</h3>
+<h3>初始指令：</h3>
+<p>請用詹宏志的筆法，寫一篇關於新店仁愛里老巷弄的散步文章</p>
+<h3>優化後指令：</h3>
+<p>請以第一人稱的角度，用詹宏志溫暖細膩的筆法，</p>
+<p>仿《背影》的情感深度，寫一篇3000字的忠誠里散步回憶錄。</p>
+<p>開頭要有懸念吸引讀者，每個景點都要有具體的生活細節，</p>
+<p>結尾要用SCQA結構引導讀者實際參與散步行程。</p>
+<p>素材：附盤點6座橋景點的詳細資料...</p>
+<p>案例二：人物故事</p>
+<h3>初始指令：</h3>
+<p>請寫王大哥的故事</p>
+<h3>優化後指令：</h3>
+<p>請以報導文學的手法，帶著深深的敬佩之情，</p>
+<p>用對話穿插的方式來增加生動性，</p>
+<p>寫一篇2000字的王大哥生命故事。</p>
+<p>重點突出他的堅韌精神和人生智慧，</p>
+<p>語調要溫暖但不煽情，真實但有感染力。</p>
+<p>素材：[完整錄音稿內容]</p>
+<p>🎓 第六章：常見問題與解決方案</p>
+<p>❓ Q1：AI寫出來的東西太制式化怎麼辦？</p>
+<h3>解決方案：</h3>
+<p>加入更多個人化的素材</p>
+<p>要求加入對話和具體場景</p>
+<p>指定更具個性的作家風格</p>
+<p>使用情境設定法</p>
+<p>❓ Q2：如何讓AI寫出來的文章更有溫度？</p>
+<h3>解決方案：</h3>
+<p>使用第一人稱敘述</p>
+<p>加入具體的生活細節</p>
+<p>要求情感共鳴類的語調</p>
+<p>提供真實的個人經歷作為素材</p>
+<p>❓ Q3：文章太長或太短怎麼控制？</p>
+<h3>解決方案：</h3>
+<p>明確指定字數要求</p>
+<p>使用長度結構控制技巧</p>
+<p>分段落來控制節奏</p>
+<p>先寫大綱再展開</p>
+<p>🌟 結語：成為AI寫作高手的秘訣</p>
+<h3>記住這三個關鍵：</h3>
+<p>不要害怕試錯</p>
+<p>- AI最大的優勢就是可以無限次重來</p>
+<p>素材是王道</p>
+<p>- 豐富的個人素材是好故事的基礎</p>
+<p>持續優化</p>
+<p>- 每次對話都是讓作品更完美的機會</p>
+<p>現在就開始你的AI寫作之旅吧！把那些珍貴的回憶、獨特的經歷，通過AI的幫助，變成動人的故事。</p>
+<p>Google Sites</p>
+<p>Report abuse</p>
+<p>Page details</p>
+<p>Page updated</p>
+<p>Google Sites</p>
+<p>Report abuse</p>
+      <h2>本頁珍貴影像與檔案</h2>
+<div class="image-gallery">
+  <div class="gallery-item"><img src="images/image_212.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_213.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_214.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_215.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_216.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_217.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_218.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_219.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_220.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_221.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_222.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_223.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_224.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_225.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_226.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_227.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_228.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_229.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_230.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_231.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_232.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_233.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_234.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_235.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_236.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_237.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_238.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_239.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_240.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_241.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_242.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+  <div class="gallery-item"><img src="images/image_243.jpg" alt="警舍街角記錄照片" loading="lazy"></div>
+</div>
+
+    </article>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      var sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
