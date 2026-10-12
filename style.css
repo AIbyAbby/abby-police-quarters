@@ -1224,3 +1224,12 @@ button,a,summary {
   .article-meta a:hover,.site-menu>summary:hover { background:var(--paper); border-color:var(--ink); }
   .sequence-card:hover { border-color:var(--ink); box-shadow:0 4px 16px #25352f0d; }
 }
+
+/* Photographs are readable content, with no secondary viewing step. */
+.photo-grid { grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; }
+.photo-thumb-wrap { aspect-ratio:auto; }
+.photo-thumb { display:block; width:100%; height:auto; object-fit:contain; }
+.photo-card { border:0; background:transparent; }
+.photo-item figcaption { font-size:14px; padding-top:12px; }
+@media (hover:hover) and (pointer:fine) { .photo-card:hover { opacity:1; transform:none; } }
+@media (max-width:760px) { .photo-grid { grid-template-columns:minmax(0,1fr); gap:32px; } }
