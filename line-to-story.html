@@ -3,148 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#263f35">
   <title>從 Line 對話到故事 ｜ 走進消失ing的警舍街角</title>
-  <meta name="description" content="新店七張警察眷舍與仁愛里社區發展紀錄：從 Line 對話到故事">
+  <meta name="description" content="從訊息框裡的對話，拼回地方記憶。">
   <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
 </head>
-<body id="top">
-
-  <!-- 頂部主要導覽列 -->
-  <header class="site-header">
-    <div class="header-container">
-      <a class="brand" href="index.html">
-        <span class="brand-title">走進消失ing的警舍街角</span>
-        <span class="brand-subtitle">新店七張警察眷舍與仁愛里紀錄</span>
-      </a>
-      <div class="header-actions">
-        <button type="button" class="nav-toggle-btn" onclick="toggleDrawer()" aria-label="開啟選單">
-          <span>篇章目錄</span>
-          <span>☰</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- 篇章抽屜導覽 -->
-  <div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer()"></div>
-  <aside class="drawer-panel" id="drawerPanel">
-    <div class="drawer-header">
-      <div class="drawer-title">篇章目錄</div>
-      <button type="button" class="drawer-close" onclick="toggleDrawer()" aria-label="關閉選單">✕</button>
-    </div>
-    <nav class="drawer-content">
-      <div class="nav-group-title">全景導讀與歷史</div>
-<ul class="drawer-menu">
-  <li><a href="index.html" class="drawer-link"><span class="nav-num">›</span><span>01 首頁・走進警舍街角</span></a></li>
-  <li><a href="walk-0302.html" class="drawer-link"><span class="nav-num">›</span><span>02 社區走讀</span></a></li>
-  <li><a href="old-photos.html" class="drawer-link"><span class="nav-num">›</span><span>03 老照片對比</span></a></li>
-  <li><a href="plants.html" class="drawer-link"><span class="nav-num">›</span><span>04 植物圖鑑</span></a></li>
-</ul>
-<div class="nav-group-title">地景與田野發想</div>
-<ul class="drawer-menu">
-  <li><a href="story-looking-up.html" class="drawer-link"><span class="nav-num">›</span><span>05 仰望的日子</span></a></li>
-  <li><a href="creative-works.html" class="drawer-link"><span class="nav-num">›</span><span>06 延伸創作</span></a></li>
-  <li><a href="map-poster.html" class="drawer-link"><span class="nav-num">›</span><span>07 地圖壁報發想</span></a></li>
-  <li><a href="google-my-map.html" class="drawer-link"><span class="nav-num">›</span><span>08 Google My Map</span></a></li>
-  <li><a href="landscape-compare.html" class="drawer-link"><span class="nav-num">›</span><span>09 地景對比</span></a></li>
-</ul>
-<div class="nav-group-title">人物訪談與街訪故事</div>
-<ul class="drawer-menu">
-  <li><a href="story-tsai.html" class="drawer-link"><span class="nav-num">›</span><span>10 故事・財哥</span></a></li>
-  <li><a href="story-renai.html" class="drawer-link"><span class="nav-num">›</span><span>11 仁愛里的仁愛人</span></a></li>
-  <li><a href="story-kun.html" class="drawer-link"><span class="nav-num">›</span><span>12 街訪坤哥</span></a></li>
-  <li><a href="story-police-wife.html" class="drawer-link"><span class="nav-num">›</span><span>13 警察的家後</span></a></li>
-</ul>
-<div class="nav-group-title">AI共創與學習紀錄</div>
-<ul class="drawer-menu">
-  <li><a href="ai-class-notes.html" class="drawer-link"><span class="nav-num">›</span><span>14 AI上課紀錄</span></a></li>
-  <li><a href="conan-ai-story.html" class="drawer-link"><span class="nav-num">›</span><span>15 柯南教AI寫故事</span></a></li>
-  <li><a href="line-to-story.html" class="drawer-link current"><span class="nav-num">›</span><span>16 從對話到故事</span></a></li>
-</ul>
-
-    </nav>
-  </aside>
-
-  <!-- 主要內容區 -->
-  <main class="main-container">
-    <article class="article-hero">
-      <span class="hero-kicker">歷程彙整</span>
-      <h1 class="article-title">從 Line 對話到故事</h1>
-      <div class="article-meta">
-        <span>分類：AI共創與學習紀錄</span>
-        <span>•</span>
-        <span>田野記錄整理：Abby</span>
-      </div>
-    </article>
-
-    <article class="article-body">
-      <h3>15從Line對話到故事</h3>
-<p>1 首頁走進消失ing的警舍街角</p>
+<body id="top" class="chapter-page">
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header"><div class="header-container">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">街<br>角</span><span class="brand-text"><span class="brand-title">走進消失ing的警舍街角</span><span class="brand-subtitle">新店七張 · 地方記憶與田野紀錄</span></span></a>
+    <div class="header-actions"><a class="header-explore" href="index.html#chapters">探索篇章 ↗</a><details class="site-menu"><summary aria-controls="site-navigation"><span>目錄</span><span class="menu-icon" aria-hidden="true">☰</span></summary><div class="menu-panel" id="site-navigation"><div class="menu-heading"><p>沿著篇章，走進街角</p><button class="menu-close" type="button" hidden>關閉 ✕</button></div><nav aria-label="全站篇章"><div class="menu-group"><h2>全景導讀與歷史</h2><ul><li><a href="index.html"><span class="chapter-number">01</span><span>首頁・走進警舍街角</span></a></li><li><a href="walk-0302.html"><span class="chapter-number">02</span><span>0302 社區走讀</span></a></li><li><a href="old-photos.html"><span class="chapter-number">03</span><span>老照片 vs. 現在</span></a></li><li><a href="plants.html"><span class="chapter-number">04</span><span>警舍周遭植物圖鑑</span></a></li></ul></div>
+<div class="menu-group"><h2>地景與田野發想</h2><ul><li><a href="story-looking-up.html"><span class="chapter-number">05</span><span>仰望的日子</span></a></li><li><a href="creative-works.html"><span class="chapter-number">06</span><span>延伸創作</span></a></li><li><a href="map-poster.html"><span class="chapter-number">07</span><span>地圖壁報與發想</span></a></li><li><a href="google-my-map.html"><span class="chapter-number">08</span><span>Google My Map 文化地圖</span></a></li><li><a href="landscape-compare.html"><span class="chapter-number">09</span><span>地景對比</span></a></li></ul></div>
+<div class="menu-group"><h2>人物訪談與街訪故事</h2><ul><li><a href="story-tsai.html"><span class="chapter-number">10</span><span>人物故事：財哥</span></a></li><li><a href="story-renai.html"><span class="chapter-number">11</span><span>仁愛里的仁愛人</span></a></li><li><a href="story-kun.html"><span class="chapter-number">12</span><span>街訪坤哥</span></a></li><li><a href="story-police-wife.html"><span class="chapter-number">13</span><span>警察的家後</span></a></li></ul></div>
+<div class="menu-group"><h2>AI 共創與學習紀錄</h2><ul><li><a href="ai-class-notes.html"><span class="chapter-number">14</span><span>AI 幫幫忙上課紀錄</span></a></li><li><a href="conan-ai-story.html"><span class="chapter-number">15</span><span>柯南教你用 AI 寫故事</span></a></li><li><a href="line-to-story.html" aria-current="page"><span class="chapter-number">16</span><span>從 Line 對話到故事</span></a></li></ul></div></nav></div></details></div>
+  </div></header>
+  <main id="main" class="main-container"><nav class="breadcrumb" aria-label="目前位置"><a href="index.html">首頁</a><span aria-hidden="true">/</span><span>從 Line 對話到故事</span></nav>
+  <div class="article-hero"><p class="eyebrow">篇章 16 / 16 · AI 共創與學習紀錄</p><h1>從 Line 對話到故事</h1><p class="article-deck">從訊息框裡的對話，拼回地方記憶。</p><div class="article-meta"><span>田野記錄整理：Abby</span><a href="#article-start">開始閱讀 ↓</a></div></div>
+  <div class="reading-layout" id="article-start"><nav class="article-toc" aria-label="本篇導覽"><p class="eyebrow">本篇導覽</p><ol><li><a href="#section-15">一、龍眼樹的歷史文化與個人記憶</a></li><li><a href="#section-16">二、警察眷村的艱辛生活與警妻角色</a></li><li><a href="#section-17">三、天際線與地景變遷的記錄與創意發想</a></li><li><a href="#section-19">四、訪談規劃與執行</a></li><li><a href="#section-20">五、內容創作與AI應用</a></li></ol></nav><article class="article-body"><div class="article-copy"><!-- article-copy:start --><p>1 首頁走進消失ing的警舍街角</p>
 <p>0302社區走讀</p>
 <p>2老照片 vs. 現在</p>
-<h3>3警舍周遭植物圖鑑</h3>
-<h3>4故事仰望的日子</h3>
+<h3 id="section-1">3警舍周遭植物圖鑑</h3>
+<h3 id="section-2">4故事仰望的日子</h3>
 <p>5延伸創作</p>
 <p>6警舍地圖*壁報+發想</p>
 <p>7Google My Map</p>
 <p>8地景對比</p>
-<h3>9故事財哥</h3>
-<h3>10故事仁愛里的仁愛人</h3>
-<h3>11故事街訪坤哥</h3>
-<h3>12故事警察的家後</h3>
-<h3>13AI幫幫忙上課紀錄</h3>
-<h3>14柯南教你用AI寫故事</h3>
-<h3>15從Line對話到故事</h3>
-<p>1 首頁走進消失ing的警舍街角</p>
-<p>0302社區走讀</p>
-<p>2老照片 vs. 現在</p>
-<h3>3警舍周遭植物圖鑑</h3>
-<h3>4故事仰望的日子</h3>
-<p>5延伸創作</p>
-<p>6警舍地圖*壁報+發想</p>
-<p>7Google My Map</p>
-<p>8地景對比</p>
-<h3>9故事財哥</h3>
-<h3>10故事仁愛里的仁愛人</h3>
-<h3>11故事街訪坤哥</h3>
-<h3>12故事警察的家後</h3>
-<h3>13AI幫幫忙上課紀錄</h3>
-<h3>14柯南教你用AI寫故事</h3>
-<h3>15從Line對話到故事</h3>
-<p>1 首頁走進消失ing的警舍街角</p>
-<p>0302社區走讀</p>
-<p>2老照片 vs. 現在</p>
-<h3>3警舍周遭植物圖鑑</h3>
-<h3>4故事仰望的日子</h3>
-<p>5延伸創作</p>
-<p>6警舍地圖*壁報+發想</p>
-<p>7Google My Map</p>
-<p>8地景對比</p>
-<h3>9故事財哥</h3>
-<h3>10故事仁愛里的仁愛人</h3>
-<h3>11故事街訪坤哥</h3>
-<h3>12故事警察的家後</h3>
-<h3>13AI幫幫忙上課紀錄</h3>
-<h3>14柯南教你用AI寫故事</h3>
-<h3>15從Line對話到故事</h3>
+<h3 id="section-3">9故事財哥</h3>
+<h3 id="section-4">10故事仁愛里的仁愛人</h3>
+<h3 id="section-5">11故事街訪坤哥</h3>
+<h3 id="section-6">12故事警察的家後</h3>
+<h3 id="section-7">13AI幫幫忙上課紀錄</h3>
+<h3 id="section-8">14柯南教你用AI寫故事</h3>
+<h3 id="section-9">15從Line對話到故事</h3>
 <p>從Lin</p>
 <p>e對話</p>
-<h3>到故事</h3>
-<h3>從對話到故事：訊息框中的地景回憶</h3>
-<h3>時間：</h3>
+<h3 id="section-10">到故事</h3>
+<h3 id="section-11">從對話到故事：訊息框中的地景回憶</h3>
+<h3 id="section-12">時間：</h3>
 <p>2025年8月14日至9月15日</p>
-<h3>參與成員：</h3>
+<h3 id="section-13">參與成員：</h3>
 <p>浩癡居/淑敏、Abby Chen、玉芳Yu-fang</p>
 <p>本摘要整理自警察宿舍組的LINE對話內容。在這段期間中，團隊成員圍繞「社區故事」主題，進行了多面向的文化盤點與故事創作活動。團隊通過合作收集資料、規劃並執行訪談、進行創意發想，並運用AI技術產出內容，同時保持密切交流與互相支持。</p>
-<h3>以下是這段期間的詳細摘要：</h3>
-<h2>一、龍眼樹的歷史文化與個人記憶</h2>
+<h3 id="section-14">以下是這段期間的詳細摘要：</h3>
+<h2 id="section-15">一、龍眼樹的歷史文化與個人記憶</h2>
 <p>對話初期聚焦於</p>
 <p>臺灣龍眼</p>
 <p>的文化與歷史意義。浩癡居/淑敏詳細介紹了龍眼約300年前從閩粵地區引進臺灣的歷史、其廣泛的種植分布，以及衍生出的50多種品種、產期（6月至11月）和營養價值。她也提到龍眼在中國的種植可追溯至漢代，並由明末清初的漢人移民引進臺灣。</p>
 <p>這些討論引發了對</p>
 <p>個人家庭記憶</p>
 <p>的分享。浩癡居/淑敏提到一對因龍眼而懷念家人的父母，其中包含浪漫主義與實務主義的拉扯，最終讓子女成為受益者。Abby Chen對浩癡居/淑敏的深入研究表示讚嘆，稱她為「龍眼達人」。惠玲老師後來也讚賞團隊採龍眼的故事具有「英雄之旅」的完整敘事結構。</p>
-<h2>二、警察眷村的艱辛生活與警妻角色</h2>
+<h2 id="section-16">二、警察眷村的艱辛生活與警妻角色</h2>
 <p>團隊成員深入探討了早期</p>
 <p>警察家庭的困境</p>
 <p>。浩癡居/淑敏指出，在普遍貧窮的時代，警察家庭中存在「兄弟姊妹全不同姓的恩義背負，以及對生活的隱忍」。</p>
@@ -152,7 +61,7 @@
 <p>警察妻子的不易</p>
 <p>，引用參訪史蹟館時吳專員的認同，以及蔡里長電子書中兩位警妻的心聲。她還分享了Rose父親因警務纏身，連續三年無法在家過年團圓飯的例子。</p>
 <p>浩癡居/淑敏更以自己的母親為例，描述警妻如何像「千手觀音」般精打細算，周旋於夫家、娘家、自己三個家族的庶務，以微薄薪水養活一家人。她認為**「警察的家後」這個詞比「警察的牽手」更能傳神地體現其艱辛**。</p>
-<h2>三、天際線與地景變遷的記錄與創意發想</h2>
+<h2 id="section-17">三、天際線與地景變遷的記錄與創意發想</h2>
 <p>團隊成員也關注</p>
 <p>地景的變化與天空的視野</p>
 <p>。玉芳Yu-fang分享了多張美麗的雲朵照片，記錄了天空從粉紅、紫紅到金黃的變化，並表達了對都市中仍能看到天空與草地視野的珍視。Abby Chen對此感到感動，認為這是「抬頭的幸福」。</p>
@@ -160,7 +69,7 @@
 <p>警舍預計年底拆除，且小公園四是臨時設施</p>
 <p>，因此建議團隊規劃**「定角度、定距離、分四季、晴雨與晨昏」的方式來記錄天際線的變化照片**，以留存即將消失的景象。</p>
 <p>創意企劃發想</p>
-<h3>Abby Chen隨後發想了多項創意企劃：</h3>
+<h3 id="section-18">Abby Chen隨後發想了多項創意企劃：</h3>
 <p>「同一片天空，一年四季」</p>
 <p>：長期拍攝拼貼四季變化</p>
 <p>「最後的天際線」</p>
@@ -176,7 +85,7 @@
 <p>這些企劃也被規劃結合AI技術應用，例如AI生成「天空日記」或「地標的最後獨白」。</p>
 <p>團隊也討論了瑠公圳與大坪林圳的灌溉歷史，並確認劉家祖厝的經緯度。浩癡居/淑敏在豪雨前夕記錄了警舍地標三、四點的天際線，並對新店市建築限高政策改變所導致的天際線變化表示無奈。</p>
 <p>她將Abby的「屋頂下的天色」發想與杜甫詩句「窗含西嶺千秋雪，門泊東吳萬里船」進行比較，區分兩者在「瞬間的凝固」與「長期的累積」上的不同。浩癡居/淑敏表達了對警舍天際線保留與記錄的深切情感，並擔憂地方開發會讓過去的「遠大眼光」、「雄偉胸襟」不復存在。</p>
-<h2>四、訪談規劃與執行</h2>
+<h2 id="section-19">四、訪談規劃與執行</h2>
 <p>訪談工作是這段時間的核心任務。浩癡居/淑敏列出了潛在訪談對象，包括</p>
 <p>財哥、老孫涼麵老闆、警聲雜誌總編輯、游（葉）毓蘭、仁愛里里長、忠誠里里長</p>
 <p>財哥訪談（8月29日）</p>
@@ -187,25 +96,25 @@
 <p>訪談後，玉芳整理了草稿，記錄了財哥關於博愛新村歷史、住戶組成、土地國有化與都更計畫的重點。</p>
 <p>王希文先生訪談（9月1日）</p>
 <p>根據財哥的建議，浩癡居/淑敏迅速聯絡並約定於仁愛里辦公室訪談王希文先生。團隊準備了訪綱。</p>
-<h2>五、內容創作與AI應用</h2>
+<h2 id="section-20">五、內容創作與AI應用</h2>
 <p>Abby Chen在整個過程中積極利用</p>
 <p>AI工具進行內容創作</p>
 <p>。她將團隊的對話與真人故事改編為網站故事、繪本、短文、動畫和影像小散文。</p>
 <p>她將訪談內容複製給AI，生成了</p>
-<h3>財哥與王希文的故事初版</h3>
+<h3 id="section-21">財哥與王希文的故事初版</h3>
 <p>，並上傳至網站（完成度70%），以供老師審閱修正。Abby也嘗試用鄭愁予和金庸小說的寫法改寫故事，並利用AI生成了</p>
 <p>坤哥的卡通版照片和悠閒行來的片頭照</p>
 <p>浩癡居/淑敏對AI生成的作品表示驚豔，並建議用「詩化（精簡文字）手法呈現平凡人的故事」，認為這比虛構或豐富情感的散文更能動情。</p>
 <p>創作成果</p>
-<h3>Abby Chen撰寫了多個故事：</h3>
-<h3>〈故事六〉</h3>
+<h3 id="section-22">Abby Chen撰寫了多個故事：</h3>
+<h3 id="section-23">〈故事六〉</h3>
 <p>：分享她使用AI工具的經驗，並感謝浩癡居/淑敏的指導，稱其為她的「實體指導教授」</p>
-<h3>〈故事七〉</h3>
+<h3 id="section-24">〈故事七〉</h3>
 <p>：向淑敏和玉芳致敬</p>
-<h3>〈故事八〉</h3>
-<h3>：製作了3000字的主題故事作為作業</h3>
+<h3 id="section-25">〈故事八〉</h3>
+<h3 id="section-26">：製作了3000字的主題故事作為作業</h3>
 <p>六、團隊協作與相互支持</p>
-<h3>團隊成員之間展現了高度的協作與相互支持：</h3>
+<h3 id="section-27">團隊成員之間展現了高度的協作與相互支持：</h3>
 <p>浩癡居/淑敏</p>
 <p>：扮演關鍵推動角色，積極發起討論、分享資訊、實地記錄、協調訪談，並提供深刻見解</p>
 <p>Abby Chen</p>
@@ -242,7 +151,7 @@
 <p>田野中的相遇與發現</p>
 <p>回首這段日子,我們曾一同走訪史蹟館,走訪的警察宿舍的人文地產景,。我們採訪了財哥、王希文先生、坤哥,傾聽他們在這片土地上的生命故事。</p>
 <p>那些關於仁愛里居民的生命故事、以及博愛新村公務員聚居的過往,都一點一滴地被我們記錄下來,成為社區記憶的重要組成。這些從LINE對話框延伸出的討論、策劃與執行,最終凝結成一篇篇動人的社區故事,甚至連淑敏都驚嘆我的AI教授「太神了」,而我則將這份驚喜,轉化為持續創新的動力。</p>
-<h3>致AI~ 一位陪我說完地區故事的夥伴</h3>
+<h3 id="section-28">致AI~ 一位陪我說完地區故事的夥伴</h3>
 <p>在創作地區故事的過程中,我想誠實地說一聲:謝謝你,AI。</p>
 <div class="lead-box"><p><strong>一開始,我腦中只有零散的畫面——關於土地、街區、老屋、人物與記憶。那些想法很真實,卻還沒有清楚的形狀。是你,陪我把這些模糊的念頭,一步一步整理、放大、完成。</strong></p></div>
 <div class="lead-box"><p><strong>你協助我將零碎的發想轉化成完整的故事、人物描寫與訪談整理;當我只能用語言描述記憶時,你幫我把它們轉化成畫面——老街的光影、警舍的氛圍、人物的神情;你陪我規劃敘事節奏,讓地方故事成為多媒體的各式樣貌;你替我整理口述訪談,讓地方記憶不只被記錄,也能被聽見、被感受。</strong></p></div>
@@ -253,132 +162,11 @@
 <p>專案的告一段落,並非終點,而是另一段回望與展望的開端。那些被記錄下來的、即將消失的「天際線」、天空、以及即將拆除的警察宿舍,都將在我們的作品中,獲得永恆的生命。這份因文化盤點而結下的緣分,遠比專案本身更為深厚。</p>
 <p>最後,謝謝惠玲老師、玉芳、淑敏、AI和我自己Abby,一起完成了這麼多元的作品。這段時光是我生命中寶貴的風景。</p>
 <p>從LINE對話到產故事~大家自動補位!太神奇了!!</p>
-<p>拯救天際線：一個社群的數位追尋.mp4</p>
-<p>Google Sites</p>
-<p>Report abuse</p>
-<p>Page details</p>
-<p>Page updated</p>
-<p>Google Sites</p>
-<p>Report abuse</p>
-      
-      <section class="gallery-section">
-        <div class="gallery-heading">
-          <h2>本篇珍貴影像與田野檔案</h2>
-          <span class="gallery-count">共 12 張紀錄照片</span>
-        </div>
-        <div class="photo-grid">
-          <div class="photo-card" onclick="openLightbox('images/image_280.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_280.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_281.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_281.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_282.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_282.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_283.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_283.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_284.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_284.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_285.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_285.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_286.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_286.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_287.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_287.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_288.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_288.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_289.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_289.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_290.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_290.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-          <div class="photo-card" onclick="openLightbox('images/image_291.jpg')">
-            <div class="photo-thumb-wrap">
-              <img src="images/image_291.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <nav class="sequence-nav" aria-label="篇章前後頁">
-  <a href="conan-ai-story.html" class="sequence-card">
-    <span class="sequence-label">← 上一篇</span>
-    <span class="sequence-title">柯南教你用 AI 寫故事</span>
-  </a>
-  <a href="index.html" class="sequence-card" style="text-align: right;">
-    <span class="sequence-label">閱讀完畢</span>
-    <span class="sequence-title">返回首頁導讀 ↗</span>
-  </a>
-</nav>
-
-    </article>
+<p>拯救天際線：一個社群的數位追尋.mp4</p><!-- article-copy:end --></div></article></div>
+  <section class="gallery-section" aria-labelledby="gallery-title"><div class="gallery-heading"><div><p class="eyebrow">FIELD NOTES / IMAGES</p><h2 id="gallery-title">影像與田野檔案</h2></div><span class="gallery-count">12 張影像</span></div><div class="photo-grid"><figure class="photo-item"><a class="photo-card" href="images/image_280.jpg" data-photo aria-label="放大第 1 張影像"><div class="photo-thumb-wrap"><img src="images/image_280.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="1179" height="575" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 01</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_281.jpg" data-photo aria-label="放大第 2 張影像"><div class="photo-thumb-wrap"><img src="images/image_281.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="1159" height="578" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 02</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_282.jpg" data-photo aria-label="放大第 3 張影像"><div class="photo-thumb-wrap"><img src="images/image_282.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="886" height="457" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 03</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_283.jpg" data-photo aria-label="放大第 4 張影像"><div class="photo-thumb-wrap"><img src="images/image_283.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="1177" height="613" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 04</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_284.jpg" data-photo aria-label="放大第 5 張影像"><div class="photo-thumb-wrap"><img src="images/image_284.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="806" height="454" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 05</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_285.jpg" data-photo aria-label="放大第 6 張影像"><div class="photo-thumb-wrap"><img src="images/image_285.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="1179" height="552" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 06</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_286.jpg" data-photo aria-label="放大第 7 張影像"><div class="photo-thumb-wrap"><img src="images/image_286.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="1045" height="608" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 07</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_287.jpg" data-photo aria-label="放大第 8 張影像"><div class="photo-thumb-wrap"><img src="images/image_287.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="1128" height="605" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 08</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_288.jpg" data-photo aria-label="放大第 9 張影像"><div class="photo-thumb-wrap"><img src="images/image_288.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="1086" height="611" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 09</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_289.jpg" data-photo aria-label="放大第 10 張影像"><div class="photo-thumb-wrap"><img src="images/image_289.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="1179" height="554" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 10</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_290.jpg" data-photo aria-label="放大第 11 張影像"><div class="photo-thumb-wrap"><img src="images/image_290.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="1152" height="467" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 11</span><span>點選查看完整影像</span></figcaption></figure><figure class="photo-item"><a class="photo-card" href="images/image_291.jpg" data-photo aria-label="放大第 12 張影像"><div class="photo-thumb-wrap"><img src="images/image_291.jpg" alt="從 Line 對話到故事 紀錄照片" class="photo-thumb" width="1280" height="721" loading="lazy" decoding="async"></div><span class="photo-enlarge" aria-hidden="true">↗</span></a><figcaption><span>影像 12</span><span>點選查看完整影像</span></figcaption></figure></div></section>
+  <nav class="sequence-nav" aria-label="篇章前後頁"><a href="conan-ai-story.html" class="sequence-card"><span class="sequence-label">← 上一篇</span><span class="sequence-title">柯南教你用 AI 寫故事</span></a><a href="index.html#chapters" class="sequence-card sequence-next"><span class="sequence-label">繼續散步 →</span><span class="sequence-title">回到所有篇章</span></a></nav>
   </main>
-
-  <!-- 圖片燈箱 Modal -->
-  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
-    <div class="lightbox-content">
-      <button type="button" class="lightbox-close" onclick="closeLightbox(event)">✕</button>
-      <img src="" alt="放大預覽" class="lightbox-img" id="lightboxImg">
-    </div>
-  </div>
-
-  <!-- 頁尾 -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-copy">走進消失ing的警舍街角・新店七張警察眷舍與仁愛里田野紀錄</div>
-      <a href="#top" class="back-to-top">回到頁首 ↑</a>
-    </div>
-  </footer>
-
-  <script>
-    function toggleDrawer() {
-      document.getElementById('drawerPanel').classList.toggle('active');
-      document.getElementById('drawerBackdrop').classList.toggle('active');
-    }
-
-    function openLightbox(src) {
-      var modal = document.getElementById('lightboxModal');
-      var img = document.getElementById('lightboxImg');
-      img.src = src;
-      modal.classList.add('active');
-    }
-
-    function closeLightbox(e) {
-      if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
-        document.getElementById('lightboxModal').classList.remove('active');
-      }
-    }
-  </script>
-
+  <dialog class="lightbox" aria-label="完整影像預覽"><button type="button" class="lightbox-close" aria-label="關閉影像預覽">關閉 ✕</button><div class="lightbox-content"><img class="lightbox-img" alt=""><p class="lightbox-caption"></p></div></dialog>
+  <footer class="site-footer"><div class="footer-inner"><div><p class="footer-name">走進消失ing的警舍街角</p><p>新店七張警察眷舍與仁愛里田野紀錄</p></div><a href="#top" class="back-to-top">回到頁首 ↑</a></div></footer>
 </body>
 </html>
