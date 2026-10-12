@@ -87,13 +87,11 @@ class WebsiteChecks(unittest.TestCase):
                             continue
                         self.assertTrue((ROOT / unquote(parsed.path)).is_file(), f'Missing asset: {value}')
 
-    def test_homepage_history_contents_includes_every_formal_section(self):
-        source = (ROOT / 'index.html').read_text(encoding='utf-8')
-        article = re.search(r'<!-- article-copy:start -->(.*?)<!-- article-copy:end -->', source, re.S)[1]
-        headings = [a['id'] for t, a in Document(article).tags if t == 'h2']
-        toc = re.search(r'<nav class="article-toc".*?</nav>', source, re.S)[0]
-        links = [a.get('href') for t, a in Document(toc).tags if t == 'a']
-        self.assertEqual(links, ['#' + heading for heading in headings])
+    def test_articles_have_no_sidebar_contents(self):
+        for page in PAGES:
+            with self.subTest(page=page):
+                source = (ROOT / page).read_text(encoding='utf-8')
+                self.assertFalse(any('article-toc' in a.get('class', '').split() for _, a in Document(source).tags))
 
     def test_homepage_gives_a_real_link_to_every_chapter(self):
         source = (ROOT / 'index.html').read_text(encoding='utf-8')
